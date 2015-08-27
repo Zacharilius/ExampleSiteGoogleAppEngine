@@ -1,0 +1,21 @@
+{
+  "name": "Portfolio",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Zacharilius/Portfolio",
+  "authors": [
+    "zacharilius <zabensley@gmail.com>"
+  ],
+  "description": "My developer web portfolio",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4"
+  }
+}
