@@ -1,4 +1,4 @@
-package com.oddJob;
+package me.zacharilius.portfolio;
 
 public class HelloGreeting {
 

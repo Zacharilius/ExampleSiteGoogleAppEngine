@@ -2,3 +2,9 @@
 dist/
 src/components/
 ideas.txt
+
+
+
+target/
+WEB-INF/appengine-generated
+*.class

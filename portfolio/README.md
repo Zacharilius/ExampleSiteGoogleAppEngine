@@ -3,13 +3,17 @@ appengine-endpoints-helloendpoints-java-maven
 
 A "hello world" application for Google Cloud Endpoints in Java.
 
+## Products
 - [App Engine][1]
 
+## Language
 - [Java][2]
 
+## APIs
 - [Google Cloud Endpoints][3]
 - [Google App Engine Maven plugin][4]
 
+## Setup Instructions
 
 1. Update the value of `application` in `appengine-web.xml` to the app
    ID you have registered in the App Engine admin console and would
@@ -18,7 +22,7 @@ A "hello world" application for Google Cloud Endpoints in Java.
 1. Optional step: These sub steps are not required but you need to do
    this if you want to use auth protected API methods.
 
-    1. Update the values in `src/main/java/com/oddJob/Constants.java`
+    1. Update the values in `src/main/java/${packageInPathFormat}/Constants.java`
        to reflect the respective client IDs you have registered in the
        [APIs Console][6].
 
