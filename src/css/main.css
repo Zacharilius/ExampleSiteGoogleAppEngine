@@ -18,12 +18,14 @@ body{
 
 
 .cont{
-  margin-top: -25px;
-  padding-top: 50px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 .paragraph{
   text-align: left;
+}
+.intro-cont{
+  padding-top: 70px;
 }
 #intro{
   background-color: #009688;

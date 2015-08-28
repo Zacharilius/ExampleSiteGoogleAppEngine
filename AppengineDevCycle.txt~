@@ -1,0 +1,13 @@
+App Engine Dev Cycle
+1) Create new project in Dev Console
+2) Go through setup tutorial: https://cloud.google.com/appengine/docs/java/gettingstarted/setup	
+	*This sets up Java, Eclipse, and Maven
+3) Run maven
+	a) <mvn archetype:generate> - All available archetypes
+	b) <appengine> - Then can filter by appengine archetype
+	c) <endpoints> - Or can filter by endpoints archetypes
+	d) <2> - Selects hello-endpoints-archetype
+		i) group id = package name
+		ii) artifact = project name
+
+
