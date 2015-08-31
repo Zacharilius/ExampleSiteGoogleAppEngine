@@ -82,10 +82,13 @@ google.devrel.samples.hello.auth = function() {
  * param {Object} greeting Greeting to print.
  */
 google.devrel.samples.hello.print = function(greeting) {
+  console.log(greeting.message);
+  /*
   var element = document.createElement('div');
   element.classList.add('row');
   element.innerHTML = greeting.message;
   document.getElementById('outputLog').appendChild(element);
+  */
 };
 
 /**
@@ -141,7 +144,7 @@ google.devrel.samples.hello.multiplyGreeting = function(
 google.devrel.samples.hello.authedGreeting = function(id) {
   gapi.client.helloworld.greetings.authed().execute(
       function(resp) {
-        google.devrel.samples.hello.print(resp);
+        google.devrel.samples.hello.print(resp);       
       });
 };
 
@@ -149,6 +152,7 @@ google.devrel.samples.hello.authedGreeting = function(id) {
  * Enables the button callbacks in the UI.
  */
 google.devrel.samples.hello.enableButtons = function() {
+  /*
   document.getElementById('getGreeting').onclick = function() {
     google.devrel.samples.hello.getGreeting(
         document.getElementById('id').value);
@@ -163,11 +167,11 @@ google.devrel.samples.hello.enableButtons = function() {
         document.getElementById('greeting').value,
         document.getElementById('count').value);
   }
+  */
 
   document.getElementById('authedGreeting').onclick = function() {
     google.devrel.samples.hello.authedGreeting();
   }
-  
   document.getElementById('signinButton').onclick = function() {
     google.devrel.samples.hello.auth();
   }

@@ -47,7 +47,9 @@
             </ul>
           </li>
         </ul>
-
+			<ul class="nav navbar-nav navbar-right">
+              <li><a href="javascript:void(0);" class="btn" id="signinButton">Google+ Sign In</a></li>
+            </ul>
       </div>
       <!--/.nav-collapse -->
     </div>
@@ -61,7 +63,10 @@
         <img class="center-image" alt="seattleSkyline" id="seattlePic" src="/images/sampleSeattleSkyline.png"/>
       </div>
   </div>
-
+    <form action="javascript:void(0);">
+        <h2>Authenticated Greeting</h2>
+        <div><input id="authedGreeting" type="submit" class="btn btn-small" disabled value="Submit"></div>
+    </form>
 
   <div id="projects" class="cont">
     <h1 class="title">Projects</h1>
@@ -195,4 +200,13 @@
 <script type="text/javascript" src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+
+<script type="text/javascript">
+	function init() {
+		google.devrel.samples.hello.init('//' + window.location.host + '/_ah/api');
+	}
+    </script>
+<script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+
 </body>
