@@ -1,9 +1,12 @@
-package me.zacharilius.portfolio;
+package me.zacharilius.portfolio.spi;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.response.NotFoundException;
 import com.google.appengine.api.users.User;
+
+import me.zacharilius.portfolio.Constants;
+import me.zacharilius.portfolio.domain.HelloGreeting;
 
 import java.util.ArrayList;
 
@@ -13,13 +16,13 @@ import javax.inject.Named;
  * Defines v1 of a helloworld API, which provides simple "greeting" methods.
  */
 @Api(
-    name = "helloworld",
+    name = "portfolio",
     version = "v1",
     scopes = {Constants.EMAIL_SCOPE},
     clientIds = {Constants.WEB_CLIENT_ID, Constants.ANDROID_CLIENT_ID, Constants.IOS_CLIENT_ID, Constants.API_EXPLORER_CLIENT_ID },
     audiences = {Constants.ANDROID_AUDIENCE}
 )
-public class Greetings {
+public class PortfolioAPI {
 
   public static ArrayList<HelloGreeting> greetings = new ArrayList<HelloGreeting>();
 
@@ -53,7 +56,7 @@ public class Greetings {
 
   @ApiMethod(name = "greetings.authed", path = "hellogreeting/authed")
   public HelloGreeting authedGreeting(User user) {
-    HelloGreeting response = new HelloGreeting("hello " + user.getEmail());
+    HelloGreeting response = new HelloGreeting("hello " + user.getEmail() +"!!!!");
     return response;
   }
 }

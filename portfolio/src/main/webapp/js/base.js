@@ -46,7 +46,7 @@ google.devrel.samples.hello.userAuthed = function() {
   var request = gapi.client.oauth2.userinfo.get().execute(function(resp) {
     if (!resp.code) {
       google.devrel.samples.hello.signedIn = true;
-      document.getElementById('signinButton').innerHTML = 'Sign out';
+      document.getElementById('signinButton').innerHTML = 'Sign Out';
       document.getElementById('authedGreeting').disabled = false;
     }
   });
@@ -96,7 +96,7 @@ google.devrel.samples.hello.print = function(greeting) {
  * @param {string} id ID of the greeting.
  */
 google.devrel.samples.hello.getGreeting = function(id) {
-  gapi.client.helloworld.greetings.getGreeting({'id': id}).execute(
+  gapi.client.portfolio.greetings.getGreeting({'id': id}).execute(
       function(resp) {
         if (!resp.code) {
           google.devrel.samples.hello.print(resp);
@@ -110,7 +110,7 @@ google.devrel.samples.hello.getGreeting = function(id) {
  * Lists greetings via the API.
  */
 google.devrel.samples.hello.listGreeting = function() {
-  gapi.client.helloworld.greetings.listGreeting().execute(
+  gapi.client.portfolio.greetings.listGreeting().execute(
       function(resp) {
         if (!resp.code) {
           resp.items = resp.items || [];
@@ -128,7 +128,7 @@ google.devrel.samples.hello.listGreeting = function() {
  */
 google.devrel.samples.hello.multiplyGreeting = function(
     greeting, times) {
-  gapi.client.helloworld.greetings.multiply({
+  gapi.client.portfolio.greetings.multiply({
       'message': greeting,
       'times': times
     }).execute(function(resp) {
@@ -142,7 +142,7 @@ google.devrel.samples.hello.multiplyGreeting = function(
  * Greets the current user via the API.
  */
 google.devrel.samples.hello.authedGreeting = function(id) {
-  gapi.client.helloworld.greetings.authed().execute(
+  gapi.client.portfolio.greetings.authed().execute(
       function(resp) {
         google.devrel.samples.hello.print(resp);       
       });
@@ -182,7 +182,7 @@ google.devrel.samples.hello.enableButtons = function() {
  * @param {string} apiRoot Root of the API's path.
  */
 google.devrel.samples.hello.init = function(apiRoot) {
-  // Loads the OAuth and helloworld APIs asynchronously, and triggers login
+  // Loads the OAuth and portfolio APIs asynchronously, and triggers login
   // when they have completed.
   var apisToLoad;
   var callback = function() {
@@ -194,6 +194,6 @@ google.devrel.samples.hello.init = function(apiRoot) {
   }
 
   apisToLoad = 2; // must match number of calls to gapi.client.load()
-  gapi.client.load('helloworld', 'v1', callback, apiRoot);
+  gapi.client.load('portfolio', 'v1', callback, apiRoot);
   gapi.client.load('oauth2', 'v2', callback);
 };
