@@ -1,11 +1,3 @@
-body{
-  text-align: center;
-  font-family: Pacifo, sans-serif;
-  color: #212121;
-  margin: 0 auto;
-
-}
-
 .dark-primary-color    { background: #00796B; }
 .default-primary-color { background: #009688; }
 .light-primary-color   { background: #B2DFDB; }
@@ -17,6 +9,111 @@ body{
 
 
 
+
+body{
+  text-align: center;
+
+  font-family: Pacifo, sans-serif;
+  background-color: #FFFFFF;
+  color: #212121;
+  margin: 0 auto;
+
+}
+/*
+ * Handles screens for desktops
+*/
+@media screen and (min-width:800px) {
+  #seattlePic{
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  #intro{
+    margin-top: 50px;
+  }
+  .project .image-box{
+    border:1px dashed blue;
+    width: 60%;
+    height: 300px;
+  }
+  .project .left-image{
+    float: left;
+  }
+
+  .project .right-image{
+    float: right
+  }
+  .project .text-box{
+    border:1px dashed green;
+    width: 40%;
+    float: left;
+    padding: 2%;
+    overflow: auto;
+  }
+  .project .text{
+    border:1px dashed black;
+    text-align: left;
+  }
+  #my-form{
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+/*
+ * Handles screens for tablets & phones
+*/
+@media screen and (max-width:800px){
+  .image-cropper {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  .center-image {
+    position: absolute;
+    left: -25%;
+    bottom: 0px;
+  }
+  #seattlePic{
+    width: 150%;
+  }
+}
+@media screen and (max-width:500px) {
+  #intro{
+    margin-top: 20px;
+  }
+  .image-cropper {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  .center-image {
+    position: absolute;
+    left: -25%;
+    bottom: 0px;
+  }
+  #seattlePic{
+    width: 150%;
+  }
+  #my-form{
+    margin: 0 auto;
+    width: 75%;
+  }
+  .project .image-box{
+    border:1px dashed blue;
+    width: 100%;
+  }
+}
+
+.blue-background{
+  background-color: #009688;
+  color: #FFFFFF;
+
+}
+
 .cont{
   padding-top: 20px;
   padding-bottom: 10px;
@@ -24,29 +121,16 @@ body{
 .paragraph{
   text-align: left;
 }
+
+
 .intro-cont{
   padding-top: 70px;
 }
-#intro{
-  background-color: #009688;
-}
-#intro .title, #intro .sub-title {
-  color: #FFFFFF;
-}
 
-#intro .title{
 
-}
-#intro .sub-title{
-
-}
-#seattlePic{
-  width: 100%;
-  margin-top: 20px;
-}
 
 #projects{
-  background-color: #FFFFFF;
+
 }
 #projects .title{
 
@@ -63,47 +147,20 @@ body{
 }
 .project img{
 }
-.project .image-box{
-  border:1px dashed blue;
-  width: 60%;
-  height: 300px;
-}
-.project .left-image{
-  float: left;
-}
 
-.project .right-image{
-  float: right
-}
-.project .text-box{
-  border:1px dashed green;
-  width: 40%;
-  float: left;
-  padding: 2%;
-  overflow: auto;
-}
-.project .text{
-  border:1px dashed black;
-  text-align: left;
-}
 .project .left-text{
 }
 .project .right-text{
 
 }
 #about{
-  background-color: #009688;
-  color: #FFFFFF;
+
 }
 
 #contact-me{
 
 }
 
-#my-form{
-  margin: 0 auto;
-  width: 50%;
-}
 .footer{
   background-color:#00796B;
   color: #FFFFFF;

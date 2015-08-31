@@ -7,6 +7,7 @@
   <link rel=stylesheet type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
   <link rel=stylesheet type="text/css" href="css/main.css">
 
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,9 +34,11 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="active"><a class="nav-elem" href="#intro">Home</a></li>
+          <li><a class = "nav-elem" href="#projects">Project</a></li>
+          <li><a class = "nav-elem" href="#about">About</a></li>
+          <li><a class = "nav-elem" href="#blog">Blog</a></li>
+          <li><a class = "nav-elem" href="#contact-me">Contact</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -49,16 +52,19 @@
             </ul>
           </li>
         </ul>
+
       </div>
       <!--/.nav-collapse -->
     </div>
   </nav>
 
 
-  <div id="intro" class="intro-cont">
+  <div id="intro" class="intro-cont blue-background">
     <h1 class="title">Zachary Bensley</h1>
     <h3 class="sub-title">Web Developer</h3>
-    <img id="seattlePic" src="images/sampleSeattleSkyline.png">
+      <div class="image-cropper">
+        <img class="center-image" alt="seattleSkyline" id="seattlePic" src="images/sampleSeattleSkyline2.png"/>
+      </div>
   </div>
 
 
@@ -102,7 +108,7 @@
 
   </div>
   </div>
-  <div id="about" class="cont default-primary-color">
+  <div id="about" class="cont blue-background">
     <h1 class="title">About</h1>
     <div class="container paragraph">
       <p>I'm a Seattle based web developer. I graduated with my Masters in Applied
@@ -123,9 +129,30 @@
       <div class="btn btn-default">Sample Sample</div>
     </div>
   </div>
-  <div id="contact-me" class="cont">
+  <div id="blog" class="cont">
+    <h1 class="title">Blog</h1>
+    <div class="container paragraph">
+      <p>I'm a Seattle based web developer. I graduated with my Masters in Applied
+        Computer Science in May. I
+      </p>
+      <p>When I create an application, the design and scalability are the two most important factors. Having design as a focus has helped me create applications that focus on user interaction and user experience. My other main focus is scalability. After
+        I complete an algorithm, I examine it for inefficiencies and then redesign and recode until the algorithm is sufficiently scalable. Focusing on design and scalability is very challenging, however, having an end product that is easily usable by
+        many users is well worth the extra time needed to create quality applications.
+      </p>
+      <p>I write in Java, Python, JavaScript, CSS, and HTML. I also have database experience with Oracle PL/SQL and MySQL. I posted some of my projects on GitHub and also under the projects tab. If you would like to give me any feedback on my projects, please
+        contact me.</p>
+      <p>I recently finishing my Masters Degree in Applied Computer Science and working as a teaching assistant. My coursework and teaching has helped me gain a theoretical and practical knowledge of computer science theory. More importantly, I try to
+        apply my knowledge of data structures and algorithms when designing and creating applications.</p>
+    </div>
+    <div class="cont">
+      <div class="btn btn-default ">Sample Sample</div>
+      <div class="btn btn-default">Sample Sample</div>
+      <div class="btn btn-default">Sample Sample</div>
+    </div>
+  </div>
+  <div id="contact-me" class="cont blue-background">
     <div class="container">
-      <h1 class="title">Contact Me</h1>
+      <h1 class="title">Contact</h1>
       <div id="my-form">
 
         <form>
@@ -149,9 +176,9 @@
   <footer class="footer">
     <div class="container dark-primary-color">
       <span><p class="text-left">@2015 Zachary Bensley</p></span>
-      <img src="images/GitHub-Mark-Light-32px.png">
-      <img src="images/In-White-34px-R.png">
-      <img src="images/jsfiddle-logo.png">
+      <a href = "../"><img src="images/GitHub-Mark-Light-32px.png"></a>
+      <a href = "../"><img src="images/In-White-34px-R.png"></a>
+      <a href = "../"><img src="images/jsfiddle-logo.png"></a>
     </div>
   </footer>
   <!-- Bootstrap core JavaScript
@@ -165,9 +192,10 @@
 <!-- Latest compiled JavaScript -->
 <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 -->
+<script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
+
 <script type="text/javascript" src="js/main.js"></script>
 
-<script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
 <script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
