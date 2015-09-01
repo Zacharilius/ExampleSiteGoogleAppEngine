@@ -153,8 +153,8 @@ body{
 .project .right-text{
 
 }
-#about{
-
+#blog .blog-text{
+	text-align: left;
 }
 
 #contact-me{

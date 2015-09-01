@@ -14,38 +14,38 @@ var google = google || {};
 google.devrel = google.devrel || {};
 
 /** samples namespace for DevRel sample code. */
-google.devrel.samples = google.devrel.samples || {};
+google.devrel.zacharilius = google.devrel.zacharilius || {};
 
 /** hello namespace for this sample. */
-google.devrel.samples.hello = google.devrel.samples.hello || {};
+google.devrel.zacharilius.portfolio = google.devrel.zacharilius.portfolio || {};
 
 /**
  * Client ID of the application (from the APIs Console).
  * @type {string}
  */
-google.devrel.samples.hello.CLIENT_ID =
+google.devrel.zacharilius.portfolio.CLIENT_ID =
     '793887692854-ttu2po83g36pi70uu16n9hdhfge54oqc.apps.googleusercontent.com';
 
 /**
  * Scopes used by the application.
  * @type {string}
  */
-google.devrel.samples.hello.SCOPES =
+google.devrel.zacharilius.portfolio.SCOPES =
     'https://www.googleapis.com/auth/userinfo.email';
 
 /**
  * Whether or not the user is signed in.
  * @type {boolean}
  */
-google.devrel.samples.hello.signedIn = false;
+google.devrel.zacharilius.portfolio.signedIn = false;
 
 /**
  * Loads the application UI after the user has completed auth.
  */
-google.devrel.samples.hello.userAuthed = function() {
+google.devrel.zacharilius.portfolio.userAuthed = function() {
   var request = gapi.client.oauth2.userinfo.get().execute(function(resp) {
     if (!resp.code) {
-      google.devrel.samples.hello.signedIn = true;
+      google.devrel.zacharilius.portfolio.signedIn = true;
       document.getElementById('signinButton').innerHTML = 'Sign Out';
       document.getElementById('authedGreeting').disabled = false;
     }
@@ -57,21 +57,21 @@ google.devrel.samples.hello.userAuthed = function() {
  * @param {boolean} mode Whether or not to use immediate mode.
  * @param {Function} callback Callback to call on completion.
  */
-google.devrel.samples.hello.signin = function(mode, callback) {
-  gapi.auth.authorize({client_id: google.devrel.samples.hello.CLIENT_ID,
-      scope: google.devrel.samples.hello.SCOPES, immediate: mode},
+google.devrel.zacharilius.portfolio.signin = function(mode, callback) {
+  gapi.auth.authorize({client_id: google.devrel.zacharilius.portfolio.CLIENT_ID,
+      scope: google.devrel.zacharilius.portfolio.SCOPES, immediate: mode},
       callback);
 };
 
 /**
  * Presents the user with the authorization popup.
  */
-google.devrel.samples.hello.auth = function() {
-  if (!google.devrel.samples.hello.signedIn) {
-    google.devrel.samples.hello.signin(false,
-        google.devrel.samples.hello.userAuthed);
+google.devrel.zacharilius.portfolio.auth = function() {
+  if (!google.devrel.zacharilius.portfolio.signedIn) {
+    google.devrel.zacharilius.portfolio.signin(false,
+        google.devrel.zacharilius.portfolio.userAuthed);
   } else {
-    google.devrel.samples.hello.signedIn = false;
+    google.devrel.zacharilius.portfolio.signedIn = false;
     document.getElementById('signinButton').innerHTML = 'Sign in';
     document.getElementById('authedGreeting').disabled = true;
   }
@@ -81,8 +81,8 @@ google.devrel.samples.hello.auth = function() {
  * Prints a greeting to the greeting log.
  * param {Object} greeting Greeting to print.
  */
-google.devrel.samples.hello.print = function(greeting) {
-  console.log(greeting.message);
+google.devrel.zacharilius.portfolio.print = function(greeting) {
+  console.log(greeting.items[0].title);
   /*
   var element = document.createElement('div');
   element.classList.add('row');
@@ -95,11 +95,11 @@ google.devrel.samples.hello.print = function(greeting) {
  * Gets a numbered greeting via the API.
  * @param {string} id ID of the greeting.
  */
-google.devrel.samples.hello.getGreeting = function(id) {
+google.devrel.zacharilius.portfolio.getGreeting = function(id) {
   gapi.client.portfolio.greetings.getGreeting({'id': id}).execute(
       function(resp) {
         if (!resp.code) {
-          google.devrel.samples.hello.print(resp);
+          google.devrel.zacharilius.portfolio.print(resp);
         } else {
           window.alert(resp.message);
         }
@@ -109,13 +109,13 @@ google.devrel.samples.hello.getGreeting = function(id) {
 /**
  * Lists greetings via the API.
  */
-google.devrel.samples.hello.listGreeting = function() {
+google.devrel.zacharilius.portfolio.listGreeting = function() {
   gapi.client.portfolio.greetings.listGreeting().execute(
       function(resp) {
         if (!resp.code) {
           resp.items = resp.items || [];
           for (var i = 0; i < resp.items.length; i++) {
-            google.devrel.samples.hello.print(resp.items[i]);
+            google.devrel.zacharilius.portfolio.print(resp.items[i]);
           }
         }
       });
@@ -126,14 +126,14 @@ google.devrel.samples.hello.listGreeting = function() {
  * @param {string} greeting Greeting to repeat.
  * @param {string} count Number of times to repeat it.
  */
-google.devrel.samples.hello.multiplyGreeting = function(
+google.devrel.zacharilius.portfolio.multiplyGreeting = function(
     greeting, times) {
   gapi.client.portfolio.greetings.multiply({
       'message': greeting,
       'times': times
     }).execute(function(resp) {
       if (!resp.code) {
-        google.devrel.samples.hello.print(resp);
+        google.devrel.zacharilius.portfolio.print(resp);
       }
     });
 };
@@ -141,39 +141,62 @@ google.devrel.samples.hello.multiplyGreeting = function(
 /**
  * Greets the current user via the API.
  */
-google.devrel.samples.hello.authedGreeting = function(id) {
-  gapi.client.portfolio.greetings.authed().execute(
+google.devrel.zacharilius.portfolio.authedGreeting = function(id) {
+  gapi.client.portfolio.blog.getMostRecent().execute(
       function(resp) {
-        google.devrel.samples.hello.print(resp);       
+        google.devrel.zacharilius.portfolio.print(resp);       
       });
 };
 
 /**
+ * Retrieves the most recent blog entry
+ */
+google.devrel.zacharilius.getBlogEntry = function(){
+	gapi.client.portfolio.blog.getMostRecent().execute(
+		function(resp) {
+			console.log("got blog entry")
+			google.devrel.zacharilius.portfolio.print(resp);
+			if(resp.items.length > 0){
+				if(resp.items[0].hasOwnProperty('title')){
+					document.getElementById('blog-title').innerHTML = resp.items[0].title;
+				}
+				if(resp.items[0].hasOwnProperty('subTitle')){
+					document.getElementById('blog-subTitle').innerHTML = resp.items[0].subTitle;
+				}
+				if(resp.items[0].hasOwnProperty('body')){
+					document.querySelector('#blog > .container > .paragraph').innerHTML = resp.items[0].body;
+				}
+			}
+		});
+	
+
+};
+/**
  * Enables the button callbacks in the UI.
  */
-google.devrel.samples.hello.enableButtons = function() {
+google.devrel.zacharilius.portfolio.enableButtons = function() {
   /*
   document.getElementById('getGreeting').onclick = function() {
-    google.devrel.samples.hello.getGreeting(
+    google.devrel.zacharilius.portfolio.getGreeting(
         document.getElementById('id').value);
   }
 
   document.getElementById('listGreeting').onclick = function() {
-    google.devrel.samples.hello.listGreeting();
+    google.devrel.zacharilius.portfolio.listGreeting();
   }
 
   document.getElementById('multiplyGreetings').onclick = function() {
-    google.devrel.samples.hello.multiplyGreeting(
+    google.devrel.zacharilius.portfolio.multiplyGreeting(
         document.getElementById('greeting').value,
         document.getElementById('count').value);
   }
   */
 
   document.getElementById('authedGreeting').onclick = function() {
-    google.devrel.samples.hello.authedGreeting();
+    google.devrel.zacharilius.portfolio.authedGreeting();
   }
   document.getElementById('signinButton').onclick = function() {
-    google.devrel.samples.hello.auth();
+    google.devrel.zacharilius.portfolio.auth();
   }
 };
 
@@ -181,15 +204,16 @@ google.devrel.samples.hello.enableButtons = function() {
  * Initializes the application.
  * @param {string} apiRoot Root of the API's path.
  */
-google.devrel.samples.hello.init = function(apiRoot) {
+google.devrel.zacharilius.portfolio.init = function(apiRoot) {
   // Loads the OAuth and portfolio APIs asynchronously, and triggers login
   // when they have completed.
   var apisToLoad;
   var callback = function() {
     if (--apisToLoad == 0) {
-      google.devrel.samples.hello.enableButtons();
-      google.devrel.samples.hello.signin(true,
-          google.devrel.samples.hello.userAuthed);
+      google.devrel.zacharilius.portfolio.enableButtons();
+      google.devrel.zacharilius.portfolio.signin(true,
+          google.devrel.zacharilius.portfolio.userAuthed);
+      google.devrel.zacharilius.getBlogEntry();
     }
   }
 

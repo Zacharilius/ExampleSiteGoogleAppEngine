@@ -54,7 +54,10 @@
       <!--/.nav-collapse -->
     </div>
   </nav>
-
+  <form action="javascript:void(0);">
+  	<h2>Authenticated Greeting</h2>
+  	<div><input id="authedGreeting" type="submit" class="btn btn-small" disabled value="Submit"></div>
+  </form>
 
   <div id="intro" class="intro-cont blue-background">
     <h1 class="title">Zachary Bensley</h1>
@@ -131,19 +134,22 @@
   </div>
   <div id="blog" class="cont">
     <h1 class="title">Blog</h1>
-    <div class="container paragraph">
-      <p>I'm a Seattle based web developer. I graduated with my Masters in Applied
-        Computer Science in May. I
-      </p>
-      <p>When I create an application, the design and scalability are the two most important factors. Having design as a focus has helped me create applications that focus on user interaction and user experience. My other main focus is scalability. After
-        I complete an algorithm, I examine it for inefficiencies and then redesign and recode until the algorithm is sufficiently scalable. Focusing on design and scalability is very challenging, however, having an end product that is easily usable by
-        many users is well worth the extra time needed to create quality applications.
-      </p>
-      <p>I write in Java, Python, JavaScript, CSS, and HTML. I also have database experience with Oracle PL/SQL and MySQL. I posted some of my projects on GitHub and also under the projects tab. If you would like to give me any feedback on my projects, please
-        contact me.</p>
-      <p>I recently finishing my Masters Degree in Applied Computer Science and working as a teaching assistant. My coursework and teaching has helped me gain a theoretical and practical knowledge of computer science theory. More importantly, I try to
-        apply my knowledge of data structures and algorithms when designing and creating applications.</p>
+    <div class="container">
+        	<div class="jumbotron">
+    
+        <h2 id="blog-title" class="title blog-text">Title</h2>
+    	<h3 id="blog-subTitle" class="title blog-text">Subtitle</h3>
+	    <div class="paragraph">
+	      <p>Blog blog blog</p>
+	      </div>
+	    </div>
     </div>
+    <div class="container" style="opaque: .5">
+    	<div class="jumbotron">
+    		<a href="/blogs"><h2 class="blog-text title">More Blogs</h2></a>		
+    	</div>
+    </div>
+
     <div class="cont">
       <div class="btn btn-default ">Sample Sample</div>
       <div class="btn btn-default">Sample Sample</div>
@@ -203,7 +209,7 @@
 
 <script type="text/javascript">
 	function init() {
-		google.devrel.samples.hello.init('//' + window.location.host + '/_ah/api');
+		google.devrel.zacharilius.portfolio.init('//' + window.location.host + '/_ah/api');
 	}
     </script>
 <script src="https://apis.google.com/js/client.js?onload=init"></script>

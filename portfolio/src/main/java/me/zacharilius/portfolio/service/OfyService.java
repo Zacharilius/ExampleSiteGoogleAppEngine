@@ -5,6 +5,7 @@ import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
 
+import me.zacharilius.portfolio.domain.Blog;
 import me.zacharilius.portfolio.domain.Profile;
 
 /**
@@ -15,8 +16,8 @@ public class OfyService {
      * This static block ensure the entity registration.
      */
     static {
-        // factory().register(Conference.class);
         factory().register(Profile.class);
+        factory().register(Blog.class);
     }
 
     /**
