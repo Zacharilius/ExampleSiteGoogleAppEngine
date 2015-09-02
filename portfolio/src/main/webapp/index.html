@@ -48,16 +48,12 @@
           </li>
         </ul>
 			<ul class="nav navbar-nav navbar-right">
-              <li><a href="javascript:void(0);" class="btn" id="signinButton">Google+ Sign In</a></li>
+              <li><a href="javascript:void(0);"  id="signinButton">Google+ Sign In</a></li>
             </ul>
       </div>
       <!--/.nav-collapse -->
     </div>
   </nav>
-  <form action="javascript:void(0);">
-  	<h2>Authenticated Greeting</h2>
-  	<div><input id="authedGreeting" type="submit" class="btn btn-small" disabled value="Submit"></div>
-  </form>
 
   <div id="intro" class="intro-cont blue-background">
     <h1 class="title">Zachary Bensley</h1>
@@ -66,10 +62,6 @@
         <img class="center-image" alt="seattleSkyline" id="seattlePic" src="/images/sampleSeattleSkyline.png"/>
       </div>
   </div>
-    <form action="javascript:void(0);">
-        <h2>Authenticated Greeting</h2>
-        <div><input id="authedGreeting" type="submit" class="btn btn-small" disabled value="Submit"></div>
-    </form>
 
   <div id="projects" class="cont">
     <h1 class="title">Projects</h1>
@@ -125,60 +117,51 @@
         contact me.</p>
       <p>I recently finishing my Masters Degree in Applied Computer Science and working as a teaching assistant. My coursework and teaching has helped me gain a theoretical and practical knowledge of computer science theory. More importantly, I try to
         apply my knowledge of data structures and algorithms when designing and creating applications.</p>
-    </div>
-    <div class="cont">
-      <div class="btn btn-default ">Sample Sample</div>
-      <div class="btn btn-default">Sample Sample</div>
-      <div class="btn btn-default">Sample Sample</div>
-    </div>
+
+	    <p class="left-text">
+          <a class="btn btn-lg btn-primary" href="/projects" role="button">More Projects »</a>
+        </p>    </div>
   </div>
   <div id="blog" class="cont">
     <h1 class="title">Blog</h1>
-    <div class="container">
-        	<div class="jumbotron">
-    
-        <h2 id="blog-title" class="title blog-text">Title</h2>
-    	<h3 id="blog-subTitle" class="title blog-text">Subtitle</h3>
-	    <div class="paragraph">
-	      <p>Blog blog blog</p>
-	      </div>
+    <div class="container">   
+        <h2 id="blog-title" class="title left-text"></h2>
+    	<h3 id="blog-subTitle" class="title left-text"></h3>
+	    <div id = "blog-body" class="paragraph">
+	      	<p></p>
 	    </div>
-    </div>
-    <div class="container" style="opaque: .5">
-    	<div class="jumbotron">
-    		<a href="/blogs"><h2 class="blog-text title">More Blogs</h2></a>		
-    	</div>
-    </div>
-
-    <div class="cont">
-      <div class="btn btn-default ">Sample Sample</div>
-      <div class="btn btn-default">Sample Sample</div>
-      <div class="btn btn-default">Sample Sample</div>
+	    <p class="left-text">
+          <a class="btn btn-lg btn-primary" href="/blogs" role="button">More Blogs »</a>
+        </p>
     </div>
   </div>
+  
+  
+  
   <div id="contact-me" class="cont blue-background">
     <div class="container">
       <h1 class="title">Contact</h1>
       <div id="my-form">
-
-        <form>
+        <form action="javascript:void(0);">
           <div class="form-group">
-            <label for="exampleName">Name</label>
-            <input type="text" class="form-control" id="exampleName" placeholder="Full Name">
+            <label for="emailName">Name</label>
+            <input type="text" class="form-control" id="emailName" placeholder="Full Name" required>
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">Email Address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            <label for="emailSubject">Email Subject</label>
+            <input type="text" class="form-control" id="emailSubject" placeholder="Subject" required>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Message</label>
-            <textarea class="form-control" id="exampleInputTextArea" name="message" rows="10" cols="30" placeholder="Message text..."></textarea>
+            <label for="emailBody">Message</label>
+            <textarea class="form-control" id="emailBody" rows="10" cols="30" placeholder="Message text..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button id = "emailSubmit" type="submit" class="btn btn-default">Send</button>
         </form>
       </div>
+      <div id="contact-me_message"></div>
     </div>
   </div>
+  
   <footer class="footer">
     <div class="container dark-primary-color">
       <span><p class="text-left">@2015 Zachary Bensley</p></span>

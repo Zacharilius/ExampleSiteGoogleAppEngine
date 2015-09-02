@@ -47,7 +47,7 @@ google.devrel.zacharilius.portfolio.userAuthed = function() {
     if (!resp.code) {
       google.devrel.zacharilius.portfolio.signedIn = true;
       document.getElementById('signinButton').innerHTML = 'Sign Out';
-      document.getElementById('authedGreeting').disabled = false;
+      /*document.getElementById('authedGreeting').disabled = false;*/
     }
   });
 };
@@ -155,7 +155,6 @@ google.devrel.zacharilius.getBlogEntry = function(){
 	gapi.client.portfolio.blog.getMostRecent().execute(
 		function(resp) {
 			console.log("got blog entry")
-			google.devrel.zacharilius.portfolio.print(resp);
 			if(resp.items.length > 0){
 				if(resp.items[0].hasOwnProperty('title')){
 					document.getElementById('blog-title').innerHTML = resp.items[0].title;
@@ -164,13 +163,37 @@ google.devrel.zacharilius.getBlogEntry = function(){
 					document.getElementById('blog-subTitle').innerHTML = resp.items[0].subTitle;
 				}
 				if(resp.items[0].hasOwnProperty('body')){
-					document.querySelector('#blog > .container > .paragraph').innerHTML = resp.items[0].body;
+					document.getElementById('blog-body').innerHTML = resp.items[0].body;
 				}
 			}
 		});
-	
-
 };
+
+/**
+ * Send email function
+ */
+google.devrel.zacharilius.portfolio.emailZach = function(emailName, emailSubject, emailBody){
+	console.log(emailName + ", " + emailSubject + ", & " + emailBody);
+	
+	gapi.client.portfolio.portfolio.sendEmail({
+		'emailName': emailName,
+		'emailSubject': emailSubject,
+		'emailBody':emailBody
+	}).execute(
+			function(resp) {
+				if(resp.result){
+					message = '<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>Success!</strong> Your message has been sent successfully.</div>';
+				}
+				else{
+					message = '<div class="alert alert-danger fade in"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>Error!</strong> An error has occurred while submitting your message.' + resp.reason+'</div>';
+				}
+				document.getElementById('contact-me_message').innerHTML = message;
+				
+			});
+			
+	console.log("End of portfolio.emailZach");
+}
+
 /**
  * Enables the button callbacks in the UI.
  */
@@ -190,16 +213,26 @@ google.devrel.zacharilius.portfolio.enableButtons = function() {
         document.getElementById('greeting').value,
         document.getElementById('count').value);
   }
-  */
+
 
   document.getElementById('authedGreeting').onclick = function() {
     google.devrel.zacharilius.portfolio.authedGreeting();
   }
+  */
+  document.getElementById('emailSubmit').onclick = function(){
+	  google.devrel.zacharilius.portfolio.emailZach(
+			  document.getElementById('emailName').value,
+			  document.getElementById('emailSubject').value,
+			  document.getElementById('emailBody').value);
+	  console.log("Email Zach");
+  }
+  
   document.getElementById('signinButton').onclick = function() {
     google.devrel.zacharilius.portfolio.auth();
   }
 };
 
+ 
 /**
  * Initializes the application.
  * @param {string} apiRoot Root of the API's path.

@@ -19,6 +19,13 @@ body{
   margin: 0 auto;
 
 }
+p{
+	font-size: 16px;
+}
+.left-text{
+	text-align: left;
+}
+
 /*
  * Handles screens for desktops
 */
@@ -83,20 +90,23 @@ body{
   #intro{
     margin-top: 20px;
   }
+  #intro .title{
+      padding-top: 100px;
+  }
   .image-cropper {
     margin: 0 auto;
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 370px;
     overflow: hidden;
   }
   .center-image {
     position: absolute;
-    left: -25%;
+    left: -75%;
     bottom: 0px;
   }
   #seattlePic{
-    width: 150%;
+    width: 250%;
   }
   #my-form{
     margin: 0 auto;
@@ -108,7 +118,7 @@ body{
   }
 }
 
-.blue-background{
+.blue-background, .blue-background a{
   background-color: #009688;
   color: #FFFFFF;
 
@@ -145,22 +155,15 @@ body{
   overflow: auto;
 
 }
-.project img{
-}
 
-.project .left-text{
-}
-.project .right-text{
-
-}
-#blog .blog-text{
-	text-align: left;
-}
 
 #contact-me{
-
+	padding-bottom: 47px;
 }
-
+.message{
+	color: #FFFFFF; 
+	background: #FFC107
+}
 .footer{
   background-color:#00796B;
   color: #FFFFFF;

@@ -9,9 +9,13 @@ import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiMethod.HttpMethod;
 import com.google.api.server.spi.response.NotFoundException;
 import com.google.api.server.spi.response.UnauthorizedException;
+import com.google.appengine.api.taskqueue.Queue;
+import com.google.appengine.api.taskqueue.QueueFactory;
+import com.google.appengine.api.taskqueue.TaskOptions;
 import com.google.appengine.api.users.User;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.cmd.Query;
+import com.googlecode.objectify.Work;
 
 import me.zacharilius.portfolio.Constants;
 import me.zacharilius.portfolio.domain.Blog;
@@ -100,7 +104,7 @@ public class PortfolioAPI {
       return email == null ? null : email.substring(0, email.indexOf("@"));
   }
   
-/*
+  /**
    * Returns the most recent blog entry
    */
   @ApiMethod(name = "blog.getMostRecent", path = "blog/newest-post", httpMethod = HttpMethod.GET)
@@ -108,6 +112,90 @@ public class PortfolioAPI {
       Query<Blog> query = ofy().load().type(Blog.class).order("-date").limit(1);
       return query.list();
   }
+  
+
+	/**
+	 * Endpoint for the contact-me form in portfolio
+	 * @param user The user object of the logged in user
+	 * @return 
+	 * @throws UnauthorizedException
+	 */  	
+  	@ApiMethod(name="portfolio.sendEmail",  httpMethod = HttpMethod.POST)
+  	public WrappedBoolean sendEmail(final User user, @Named("emailName") final String emailName, 
+  			@Named("emailSubject") final String emailSubject, @Named("emailBody") final String emailBody)
+  	        throws UnauthorizedException {
+  		System.out.println("emailName: " + emailName);
+  		if (user == null) {
+  			throw new UnauthorizedException("Authorization required");
+  	    }
+        final String userId = user.getUserId();
+        Key<Profile> profileKey = Key.create(Profile.class, userId);
+        final Queue queue = QueueFactory.getDefaultQueue();
+        
+        // Start transaction
+        WrappedBoolean result = ofy().transact(new Work<WrappedBoolean>() {
+            @Override
+            public WrappedBoolean run() {
+                try {
+                    Profile profile = getProfileFromUser(user);
+                    if(profile == null){
+                    	return new WrappedBoolean(false, "Not registered user");
+                    }
+                	queue.add(ofy().getTransaction(),
+                		TaskOptions.Builder.withUrl("/tasks/send_me_an_email")
+                		.param("email",  profile.getMainEmail())
+                		.param("emailName", emailName)
+                		.param("emailBody", emailBody)
+                		.param("emailSubject", emailSubject));
+                	
+                	return new WrappedBoolean(true, "Your email has been sent");
+                }catch(Exception e){
+                	return new WrappedBoolean(false);
+                }
+            }
+        });
+        return result;
+  	}
+  	 /**
+     * Just a wrapper for Boolean.
+     * We need this wrapped Boolean because endpoints functions must return
+     * an object instance, they can't return a Type class such as
+     * String or Integer or Boolean
+     */
+    public static class WrappedBoolean {
+
+        private final Boolean result;
+        private final String reason;
+
+        public WrappedBoolean(Boolean result) {
+            this.result = result;
+            this.reason = "";
+        }
+
+        public WrappedBoolean(Boolean result, String reason) {
+            this.result = result;
+            this.reason = reason;
+        }
+
+        public Boolean getResult() {
+            return result;
+        }
+
+        public String getReason() {
+            return reason;
+        }
+    } 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   

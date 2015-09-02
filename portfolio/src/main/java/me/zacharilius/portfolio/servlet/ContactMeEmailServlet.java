@@ -1,7 +1,5 @@
 package me.zacharilius.portfolio.servlet;
 
-import com.google.appengine.api.utils.SystemProperty;
-
 import java.io.IOException;
 import java.util.Properties;
 import java.util.logging.Level;
@@ -18,32 +16,47 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.appengine.api.utils.SystemProperty;
+
 /**
- * Servlet implementation class SendConfirmationEmailServlet
+ * Servlet implementation class ContactMeEmailServlet
  */
-public class SendConfirmationEmailServlet extends HttpServlet {
+public class ContactMeEmailServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
        
-    private static final Logger Log = Logger.getLogger(SendConfirmationEmailServlet.class.getName());
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ContactMeEmailServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+    private static final Logger Log = Logger.getLogger(ContactMeEmailServlet.class.getName());
 
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String email = request.getParameter("email");
-		String conferenceInfo = request.getParameter("conferenceInfo");
+		String email = "zabensley@gmail.com";
+		String emailName = request.getParameter("emailName");
+		String emailSubject = request.getParameter("emailSubject");
+		String emailBody = request.getParameter("emailBody");
+		
 		Properties props = new Properties();
 		
 		Session session = Session.getDefaultInstance(props, null);
-		String body = "Hi, you have created the following conference. \n" + conferenceInfo;
+		String body = "You are being send an email from: \n\n" + emailName + "\n\n";
 		try{
 			Message message = new MimeMessage(session);
 			InternetAddress from = new InternetAddress(
 					String.format("noreply@%s.appspotmail.com", 
-							SystemProperty.applicationId.get()), "Conference Central");
+							SystemProperty.applicationId.get()), "Zacharilius");
 			message.setFrom(from);
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(email, ""));
-			message.setSubject("You created a new Conference!");
+			message.setSubject(emailSubject);
 			message.setText(body);
 			Transport.send(message);
 		} catch(MessagingException e){
+			System.out.println("ERROR!!!!");
 			Log.log(Level.WARNING, String.format("Failed to send an email to %s", email), e);
 			throw new RuntimeException(e);
 		}

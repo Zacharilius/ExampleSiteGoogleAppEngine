@@ -14,4 +14,21 @@
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
+   <servlet>
+      	<servlet-name>ContactMeEmailServlet</servlet-name>
+       <servlet-class>me.zacharilius.portfolio.servlet.ContactMeEmailServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+       <servlet-name>ContactMeEmailServlet</servlet-name>
+       <url-pattern>/tasks/send_me_an_email</url-pattern>
+   </servlet-mapping> 
+   <security-constraint>
+       <web-resource-collection>
+           <web-resource-name>tasks</web-resource-name>
+           <url-pattern>/tasks/*</url-pattern>
+       </web-resource-collection>
+       <auth-constraint>
+           <role-name>admin</role-name>
+       </auth-constraint>
+   </security-constraint>
 </web-app>
