@@ -185,7 +185,7 @@ google.devrel.zacharilius.portfolio.emailZach = function(emailName, emailSubject
 					message = '<div class="alert alert-success fade in"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>Success!</strong> Your message has been sent successfully.</div>';
 				}
 				else{
-					message = '<div class="alert alert-danger fade in"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>Error!</strong> An error has occurred while submitting your message.' + resp.reason+'</div>';
+					message = '<div class="alert alert-danger fade in"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>Error!</strong> An error has occurred while submitting your message: ' + resp.reason+'</div>';
 				}
 				document.getElementById('contact-me_message').innerHTML = message;
 				

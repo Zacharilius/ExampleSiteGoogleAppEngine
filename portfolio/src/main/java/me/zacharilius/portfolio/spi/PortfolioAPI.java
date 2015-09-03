@@ -19,7 +19,6 @@ import com.googlecode.objectify.Work;
 
 import me.zacharilius.portfolio.Constants;
 import me.zacharilius.portfolio.domain.Blog;
-import me.zacharilius.portfolio.domain.HelloGreeting;
 import me.zacharilius.portfolio.domain.Profile;
 import me.zacharilius.portfolio.form.BlogForm;
 
@@ -40,12 +39,7 @@ import javax.inject.Named;
 )
 public class PortfolioAPI {
 
-  public static ArrayList<HelloGreeting> greetings = new ArrayList<HelloGreeting>();
 
-  static {
-    greetings.add(new HelloGreeting("hello world!"));
-    greetings.add(new HelloGreeting("goodbye world!"));
-  }
   /*
    * Creates a new blog entry
    */
@@ -186,54 +180,26 @@ public class PortfolioAPI {
         }
     } 
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  public HelloGreeting getGreeting(@Named("id") Integer id) throws NotFoundException {
-    try {
-      return greetings.get(id);
-    } catch (IndexOutOfBoundsException e) {
-      throw new NotFoundException("Greeting not found with an index: " + id);
-    }
-  }
-
-  public ArrayList<HelloGreeting> listGreeting() {
-    return greetings;
-  }
-
-  @ApiMethod(name = "greetings.multiply", httpMethod = "post")
-  public HelloGreeting insertGreeting(@Named("times") Integer times, HelloGreeting greeting) {
-    HelloGreeting response = new HelloGreeting();
-    StringBuilder responseBuilder = new StringBuilder();
-    for (int i = 0; i < times; i++) {
-      responseBuilder.append(greeting.getMessage());
-    }
-    response.setMessage(responseBuilder.toString());
-    return response;
-  }
-
-  @ApiMethod(name = "greetings.authed", path = "hellogreeting/authed")
-  public HelloGreeting authedGreeting(User user) {
-    HelloGreeting response = new HelloGreeting("hello " + user.getEmail() +"!!!!");
-    return response;
-  }
+    
+    
+	/**
+	 * Endpoint for the contact-me form in portfolio
+	 * @param user The user object of the logged in user
+	 * @return 
+	 * @throws UnauthorizedException
+	 */  	
+  	@ApiMethod(name="portfolio.sendEmail",  httpMethod = HttpMethod.POST)
+  	public void myClass(){
+  		
+  	}
+  	
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

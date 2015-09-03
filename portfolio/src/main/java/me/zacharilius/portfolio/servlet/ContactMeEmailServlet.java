@@ -44,7 +44,7 @@ public class ContactMeEmailServlet extends HttpServlet {
 		Properties props = new Properties();
 		
 		Session session = Session.getDefaultInstance(props, null);
-		String body = "You are being send an email from: \n\n" + emailName + "\n\n";
+		String body = "You are being send an email from: " + emailName + "\n\n" + emailBody;
 		try{
 			Message message = new MimeMessage(session);
 			InternetAddress from = new InternetAddress(
