@@ -15,20 +15,14 @@
   <link rel="stylesheet" href="/css/icomoon.css">
   <link rel=stylesheet type="text/css" href="/css/main.css">  
 </head>
-
-
-
-
 <body>
   <div>
-  	<div class=".icon-container nav-buttons">
-		<div class="icon-row">		
-			<a href="#" data-toggle="tooltip" title="Github: Source Code"><span class="icon icon-sun"></span></a>
-			<a href="#/projects" data-toggle="tooltip" title="Projects"><span class="icon icon-star-empty"></span></a>
-			<a href="#" data-toggle="tooltip" title="Linkedin"><span class="icon icon-droplet"></span></a>
-			<a href="#" data-toggle="tooltip" title="Linkedin"><span class="icon icon-pacman"></span></a>
-			<!-- A pacman follows the cursor -->
-		</div>
+	<div class="nav-buttons">
+		<ul class="list-inline">		
+			<li><a class="tooltip-message" href="#" data-toggle="tooltip" data-placement="bottom" title="Day"><span id = "sun" class="icon icon-sun"></span></a></li>
+			<li><a class="tooltip-message" href="#" data-toggle="tooltip" data-placement="bottom" title="Night"><span id = "night" class="icon icon-star-empty"></span></a></li>
+			<li><a class="tooltip-message" href="#" data-toggle="tooltip" data-placement="bottom" title="Rainy"><span id = "rain" class="icon icon-droplet"></span></a></li>
+		</ul>
 	</div>
   	<div class=header-text>
     	<h1 class="title">Zachary Bensley</h1>
@@ -36,40 +30,22 @@
     </div>
 	<div class="container">
 		<ul class="list-inline">	
-			<li><a class="test" href="#/" data-toggle="tooltip" data-placement="top" title="Projects"><span class="icon icon-sphere"></span></a></li>
-			<li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Github"><span class="icon icon-github"></span></a></li>
-			<li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Codepen"><span class="icon icon-codepen"></span></a></li>
+			<li><a class="tooltip-message" href="#/" data-toggle="tooltip" data-placement="bottom" title="Home"><div class="square"><span id="home" class="icon icon-home3"></span></div></a></li>
+			<li><a class="tooltip-message" href="#/projects" data-toggle="tooltip" data-placement="bottom" title="Projects"><div class="square"><span id="projects" class="icon icon-sphere"></span></div></a></li>
+			<li><a class="tooltip-message" href="http://www.github.com/zacharilius" data-toggle="tooltip" data-placement="bottom" title="Github"><div class=" circle"><span id="github" class="icon icon-github"></span></div></a></li>
+			<li><a class="tooltip-message" href="http://codepen.io/zacharilius/" data-toggle="tooltip" data-placement="bottom" title="Codepen"><div class="square"><span id="codepen" class="icon icon-codepen"></span></div></a></li>
+			<li><a class="tooltip-message" href="#/maps" data-toggle="tooltip" data-placement="bottom" title="Maps!"><div class="map-circle circle"><span id="earth" class="icon icon-earth"></span></div></a></li>
 		</ul>
 		<ul class="list-inline">
-			<li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Home"><span class="icon icon-home3"></span></a></li>
-			<li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><span class="icon  icon-linkedin"></span></a>
-			<li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Pics"><span class="icon icon-instagram"></span></a></li>
-			<li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Contact Me"><span class="icon icon-envelop"></span></a></li>
-			<li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Maps...I love maps"><span class="icon icon-earth"></span></a></li>
+			<li><a class="tooltip-message" href="http://linkedin.com/zabensley" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><div class="square-linkedin square"><span id="linkedin" class="icon  icon-linkedin"></span></div></a>
+			<li><a class="tooltip-message" href="http://instagram.com/zacharilius" data-toggle="tooltip" data-placement="bottom" title="Instagram"><div class="square-instagram square"><span id="instagram" class="icon icon-instagram"></span></div></a></li>
+			<li><a class="tooltip-message" href="#/contact" data-toggle="tooltip" data-placement="bottom" title="Contact"><div class="square"><span id="contactme" class="icon icon-envelop"></span></div></a></li>
 		</ul>	
 	</div>	
 	<div class="image-cropper">
 		<img class="center-image" alt="seattleSkyline" id="seattlePic" src="/images/sampleSeattleSkyline.png"/>
 	</div>
   </div>
-
-
-
-
-<div class="container">
-  <ul class="list-inline">
-    <li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>
-    <li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Bottom</a></li>
-    <li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Left</a></li>
-    <li><a class="test" href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a></li>
-  </ul>
-</div>
-
-
-
-
-
-
 
 
   <!-- Bootstrap core JavaScript
@@ -92,12 +68,7 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 
-<script type="text/javascript">
-	function init() {
-		google.devrel.zacharilius.portfolio.init('//' + window.location.host + '/_ah/api');
-	}
-    </script>
-<script src="https://apis.google.com/js/client.js?onload=init"></script>
+
 
 <script>
 $(document).ready(function(){

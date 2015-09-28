@@ -10,7 +10,7 @@
 
 
 .header-text{
-	padding-top: 5%;
+	padding-top: 3%;
 }
 
 .nav-buttons{
@@ -22,14 +22,12 @@
 
 .icon{
 	color: #FFFFFF;
-	margin-left: 1px;
-	margin-right: 1px;
-	font-size: 32px;
-}
+	font-size: 35px;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;}
 
 body{
   text-align: center;
-
   font-family: Pacifo, sans-serif;
   background-color: #009688;
   color: #FFFFFF;
@@ -37,25 +35,87 @@ body{
 }
 
 /* Tooltip */
-.test + .tooltip > .tooltip-inner {
+.tooltip-message + .tooltip > .tooltip-inner {
     background-color: transparent; 
     color: #FFFFFF; 
-    padding-bottom: 10px;
+    padding-bottom: 0px;
     font-size: 20px;
 }
 /* Tooltip on top */
-.test + .tooltip.top > .tooltip-arrow {
-    border-top: 5px solid transparent;*/
+.tooltip-message + .tooltip.top > .tooltip-arrow {
+    border-top: 5px solid transparent;
 }
-
+/* Tooltip on bottom */
+.tooltip-message + .tooltip.bottom > .tooltip-arrow {
+    border-bottom: 5px solid transparent;
+}
 ul{
-	margin-top: 25px;
+	margin-bottom: 40px;
 }
 a:focus, a:hover {
     text-decoration: none;
 }
+#sun:hover, #sun:focus{
+	color:#F4CC0A;
+}
+#night:hover, #night:focus{
+	color:#FBF619;
+}
+#rain:hover, #rain:focus{
+	color:#03DDFF;
+}
+#projects:hover, #projects:focus{
+	color:#FFC107;
+}
+#github:hover, #github:focus{
+	color:#6D3353;
+}
+#codepen:hover, #codepen:focus{
+	color:#000;
+}
+#home:hover, #home:focus{
+	color:#B91787;
+}
+#linkedin:hover, #linkedin:focus{
+	color: #1985BC;	
+}
+#instagram:hover, #instagram:focus{
+	color:#F15E5E;
+}
+#contactme:hover, #contactme:focus{
+	color:#F6590C;
+}
+#earth:hover, #earth:focus{
+	color:#73d216;
+}
+.square-instagram:hover, .square-instagram:focus{
+	background:#FFFFFF;
+}
+.square-linkedin:hover, .square-linkedin:focus{
+	background: #FFFFFF;	
+}
+.square:hover, .square:focus{
+	width: 35px;
+	height: 35px;
+	-moz-border-radius: 25%;
+	-webkit-border-radius: 25%;
+	border-radius: 25%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
 
-
+.map-circle:hover, .map-circle:focus{
+	background: #2072C9;
+}
+.circle:hover, .circle:focus{
+	width: 35px;
+	height: 35px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+}
 /*
  * Handles desktop screens
  */
