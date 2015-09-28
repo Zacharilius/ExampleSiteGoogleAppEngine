@@ -12,164 +12,67 @@
  <link rel="icon" href="/images/favicon.ico">
  <script type="text/javascript" src="/js/base.js"></script>
   <link rel=stylesheet type="text/css" href="/components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel=stylesheet type="text/css" href="/css/main.css">
+  <link rel="stylesheet" href="/css/icomoon.css">
+  <link rel=stylesheet type="text/css" href="/css/main.css">  
 </head>
 
+
+
+
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Zachary Bensley</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a class="nav-elem" href="#intro">Home</a></li>
-          <li><a class = "nav-elem" href="#projects">Project</a></li>
-          <li><a class = "nav-elem" href="#about">About</a></li>
-          <li><a class = "nav-elem" href="#blog">Blog</a></li>
-          <li><a class = "nav-elem" href="#contact-me">Contact</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-			<ul class="nav navbar-nav navbar-right">
-              <li><a href="javascript:void(0);"  id="signinButton">Google+ Sign In</a></li>
-            </ul>
-      </div>
-      <!--/.nav-collapse -->
+  <div>
+  	<div class=".icon-container nav-buttons">
+		<div class="icon-row">		
+			<a href="#" data-toggle="tooltip" title="Github: Source Code"><span class="icon icon-sun"></span></a>
+			<a href="#/projects" data-toggle="tooltip" title="Projects"><span class="icon icon-star-empty"></span></a>
+			<a href="#" data-toggle="tooltip" title="Linkedin"><span class="icon icon-droplet"></span></a>
+			<a href="#" data-toggle="tooltip" title="Linkedin"><span class="icon icon-pacman"></span></a>
+			<!-- A pacman follows the cursor -->
+		</div>
+	</div>
+  	<div class=header-text>
+    	<h1 class="title">Zachary Bensley</h1>
+    	<h3 class="sub-title">Web Developer</h3>
     </div>
-  </nav>
-
-  <div id="intro" class="intro-cont blue-background">
-    <h1 class="title">Zachary Bensley</h1>
-    <h3 class="sub-title">Web Developer</h3>
-      <div class="image-cropper">
-        <img class="center-image" alt="seattleSkyline" id="seattlePic" src="/images/sampleSeattleSkyline.png"/>
-      </div>
+	<div class=".icon-container">
+		<div class="icon-row">		
+			<a href="#/projects" data-toggle="tooltip" data-placement="top" title="Projects"><span class="icon icon-world"></span></a>
+			<a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><span class="icon  icon-linkedin"></span></a>
+			<a href="#" data-toggle="tooltip" data-placement="top" title="Github: Source Code"><span class="icon icon-github"></span></a>
+			<a href="#" data-toggle="tooltip" data-placement="top" title="Codepen"><span class="icon icon-codepen"></span></a>
+			<a href="#" data-toggle="tooltip" data-placement="top" title="Pics"><span class="icon icon-instagram"></span></a>
+		</div>
+		<div class="icon-row">
+			<a href="#" data-toggle="tooltip" title="Home"><span class="icon icon-home3"></span></a>
+			<a href="#" data-toggle="tooltip" title="Contact Me"><span class="icon icon-envelop"></span></a>
+			<a href="#" data-toggle="tooltip" title="Maps...I love maps"><span class="icon icon-earth"></span></a>
+		</div>	
+	</div>	
+	<div class="image-cropper">
+		<img class="center-image" alt="seattleSkyline" id="seattlePic" src="/images/sampleSeattleSkyline.png"/>
+	</div>
   </div>
 
-  <div id="projects" class="cont">
-    <h1 class="title">Projects</h1>
-    <div class="project">
-      <img class="right-image image-box" src="/images/sample-icon.png" alt="Right Image Issue">
-      <div class="text-box">
-        <h2>Title</h2>
-        <p class="text">Left-text Blah blah blah blah blah blah blah blah blah
-          blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-          blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-          blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-          blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
 
-          <p class="text">Left-text Blah blah blah blah blah blah blah blah blah
-            blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-            blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-            blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-            blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
-      </div>
-    </div>
-    <div class="project">
-      <img class="left-image image-box " src="images/sample-icon.png" alt="Left Image Issue">
-      <div class="text-box">
-        <h2>Title</h2>
-        <p class="text">Left-text Blah blah blah blah blah blah blah blah blah
-          blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-          blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-          blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-          blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
 
-          <p class="text left-text">Left-text Blah blah blah blah blah blah blah blah blah
-            blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-            blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-            blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-            blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
-      </div>
-    </div>
-    </div>
 
-  </div>
-  </div>
-  <div id="about" class="cont blue-background">
-    <h1 class="title">About</h1>
-    <div class="container paragraph">
-      <p>I'm a Seattle based web developer. I graduated with my Masters in Applied
-        Computer Science in May. I
-      </p>
-      <p>When I create an application, the design and scalability are the two most important factors. Having design as a focus has helped me create applications that focus on user interaction and user experience. My other main focus is scalability. After
-        I complete an algorithm, I examine it for inefficiencies and then redesign and recode until the algorithm is sufficiently scalable. Focusing on design and scalability is very challenging, however, having an end product that is easily usable by
-        many users is well worth the extra time needed to create quality applications.
-      </p>
-      <p>I write in Java, Python, JavaScript, CSS, and HTML. I also have database experience with Oracle PL/SQL and MySQL. I posted some of my projects on GitHub and also under the projects tab. If you would like to give me any feedback on my projects, please
-        contact me.</p>
-      <p>I recently finishing my Masters Degree in Applied Computer Science and working as a teaching assistant. My coursework and teaching has helped me gain a theoretical and practical knowledge of computer science theory. More importantly, I try to
-        apply my knowledge of data structures and algorithms when designing and creating applications.</p>
+<div class="container">
+  <h3>Tooltip CSS Example</h3>
+  <ul class="list-inline">
+    <li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>
+    <li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Bottom</a></li>
+    <li><a class="test" href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Left</a></li>
+    <li><a class="test" href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a></li>
+  </ul>
+</div>
 
-	    <p class="left-text">
-          <a class="btn btn-lg btn-primary" href="/projects" role="button">More Projects »</a>
-        </p>    </div>
-  </div>
-  <div id="blog" class="cont">
-    <h1 class="title">Blog</h1>
-    <div class="container">   
-        <h2 id="blog-title" class="title left-text"></h2>
-    	<h3 id="blog-subTitle" class="title left-text"></h3>
-	    <div id = "blog-body" class="paragraph">
-	      	<p></p>
-	    </div>
-	    <p class="left-text">
-          <a class="btn btn-lg btn-primary" href="/blogs" role="button">More Blogs »</a>
-        </p>
-    </div>
-  </div>
-  
-  
-  
-  <div id="contact-me" class="cont blue-background">
-    <div class="container">
-      <h1 class="title">Contact</h1>
-      <div id="my-form">
-        <form action="javascript:void(0);">
-          <div class="form-group">
-            <label for="emailName">Name</label>
-            <input type="text" class="form-control" id="emailName" placeholder="Full Name" required>
-          </div>
-          <div class="form-group">
-            <label for="emailSubject">Email Subject</label>
-            <input type="text" class="form-control" id="emailSubject" placeholder="Subject" required>
-          </div>
-          <div class="form-group">
-            <label for="emailBody">Message</label>
-            <textarea class="form-control" id="emailBody" rows="10" cols="30" placeholder="Message text..." required></textarea>
-          </div>
-          <button id = "emailSubmit" type="submit" class="btn btn-default">Send</button>
-        </form>
-      </div>
-      <div id="contact-me_message"></div>
-    </div>
-  </div>
-  
-  <footer class="footer">
-    <div class="container dark-primary-color">
-      <span><p class="text-left">@2015 Zachary Bensley</p></span>
-      <a href = "../"><img src="/images/logos/GitHub-Mark-Light-32px.png"></a>
-      <a href = "../"><img src="/images/logos/In-White-34px-R.png"></a>
-      <a href = "../"><img src="/images/logos/jsfiddle-logo.png"></a>
-    </div>
-  </footer>
+
+
+
+
+
+
+
   <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -197,5 +100,9 @@
     </script>
 <script src="https://apis.google.com/js/client.js?onload=init"></script>
 
-
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
 </body>
