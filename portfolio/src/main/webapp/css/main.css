@@ -19,13 +19,9 @@
 	right: 1%;
 }
 
-.icon-container{
-	margin: 1% 0 1% 0;
-}
-.icon-row{
-	margin-top: 1%;
-}
+
 .icon{
+	color: #FFFFFF;
 	margin-left: 1px;
 	margin-right: 1px;
 	font-size: 32px;
@@ -42,18 +38,22 @@ body{
 
 /* Tooltip */
 .test + .tooltip > .tooltip-inner {
-    background-color: #8AC007; 
+    background-color: transparent; 
     color: #FFFFFF; 
-    border: 1px solid green; 
-    padding: 15px;
+    padding-bottom: 10px;
     font-size: 20px;
 }
 /* Tooltip on top */
 .test + .tooltip.top > .tooltip-arrow {
-    border-top: 5px solid green;
+    border-top: 5px solid transparent;*/
 }
 
-
+ul{
+	margin-top: 25px;
+}
+a:focus, a:hover {
+    text-decoration: none;
+}
 
 
 /*
