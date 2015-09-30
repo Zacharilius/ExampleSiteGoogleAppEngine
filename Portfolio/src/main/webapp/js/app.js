@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc object
- * @name oddjobApp
+ * @name zachariliusApp
  * @requires $routeProvider
  * @requires jobControllers
  * @requires ui.bootstrap
@@ -11,38 +11,30 @@
  * Root app, which routes and specifies the partial html and controller depending on the url requested.
  *
  */
-var app = angular.module('oddjobApp',
-    ['odd-jobControllers', 'ngRoute', 'ui.bootstrap']).
-    config(['$routeProvider',
-        function ($routeProvider) {
-            $routeProvider.
-	            when('/profile/:websafeProfileKey', {
-	                templateUrl: '/partials/profile_detail.html',
-	                controller: 'ProfileDetailCtrl'
-	            }).                
-	            when('/profile', {
-                    templateUrl: '/partials/profile.html',
-                    controller: 'ProfileCtrl'
-                }).
-                when('/job/post', {
-                    templateUrl: '/partials/post_job.html',
-                    controller: 'JobCtrl'
-                }).
-                when('/job/:websafeJobKey', {
-                    templateUrl: '/partials/job_detail.html',
-                    controller: 'JobDetailCtrl'
-                }).
-                when('/job', {
-                    templateUrl: '/partials/show_jobs.html',
-                    controller: 'ShowJobCtrl'
-                }).
-                when('/', {
-                    templateUrl: '/partials/home.html'
-                }).
-                otherwise({
-                    redirectTo: '/'
-                });
-        }]);
+var app = angular.module('zachariliusApp',
+		['zachariliusControllers', 'ngRoute', 'ui.bootstrap', 'ngAnimate']).
+		config(['$routeProvider',
+		        function ($routeProvider) {
+			            $routeProvider.
+				            when('/projects', {
+				                templateUrl: '/partials/projects.html',
+				                controller: 'ProjectsCtrl'
+				            }).                
+				            when('/contact', {
+			                    templateUrl: '/partials/contact.html',
+			                    controller: 'ProfileCtrl'
+			                }).
+			                when('/maps', {
+			                    templateUrl: '/partials/maps.html',
+			                    controller: 'JobCtrl'
+			                }).
+			                when('/', {
+			                    templateUrl: '/partials/home.html'
+			                }).
+			                otherwise({
+			                    redirectTo: '/'
+			                });
+			        }]);
 
 /**
  * @ngdoc filter

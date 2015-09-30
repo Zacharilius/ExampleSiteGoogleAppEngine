@@ -24,7 +24,8 @@
 	color: #FFFFFF;
 	font-size: 35px;
 	margin:0px 0px 0px 0px;
-	padding:0px 0px 0px 0px;}
+	padding:0px 0px 0px 0px;
+}
 
 body{
   text-align: center;
@@ -32,6 +33,7 @@ body{
   background-color: #009688;
   color: #FFFFFF;
   margin: 0 auto;
+  overflow-y scroll;
 }
 
 /* Tooltip */
@@ -174,4 +176,40 @@ a:focus, a:hover {
   #seattlePic{
     width: 250%;
   }
+}
+.picture-container{
+	overflow: hidden;
+	height: 400px;
+	margin: 0 auto;
+}
+
+.project{
+	padding-top: 20px;
+}
+.project-image{
+    height: 100%;
+    display: inline;
+}
+.project-button-img{
+	height: 14px;
+}
+
+.project-text{
+	text-align: left;
+}
+.screenType{
+	color: #FFFFFF;
+	font-size: 35px;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	display: block;
+}
+.screenType:hover{
+	color: #005D53;
+}
+.screenType:active, .screenType.active {
+	color: #005D53;
+}
+.btn.active, .btn:active {
+	box-shadow: none;	
 }

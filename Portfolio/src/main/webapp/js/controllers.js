@@ -1,11 +1,11 @@
 'use strict';
 
 /**
- * The root oddjobApp module.
+ * The root zachariliusApp module.
  * 
- * @type {oddjobApp|*|{}}
+ * @type {zachariliusApp|*|{}}
  */
-var oddjobApp = oddjobApp || {};
+var zachariliusApp = zachariliusApp || {};
 
 /**
  * @ngdoc module
@@ -14,8 +14,64 @@ var oddjobApp = oddjobApp || {};
  * @description Angular module for controllers.
  * 
  */
-oddjobApp.controllers = angular
-		.module('odd-jobControllers', [ 'ui.bootstrap' ]);
+zachariliusApp.controllers = angular
+		.module('zachariliusControllers', [ 'ui.bootstrap' ]);
+
+
+zachariliusApp.controllers.controller('ProjectsCtrl', function($scope){
+	$scope.p1isActive = "desktop";
+	$scope.p2isActive = "desktop";
+
+	$scope.p1image = '/images/project/odd-job_DesktopView.png';
+	$scope.p2image = '/images/project/odd-job_DesktopView.png';
+	
+	$scope.isActive = function(project, type){
+		if(project === 'p1'){
+			if(type === $scope.p1isActive){
+				console.log("active: " + project + type)
+				return 'active';
+			};
+		}
+		else if(project === 'p2'){
+			if(type === $scope.p2isActive){
+				return 'active';
+			};
+		};
+	};
+	
+	$scope.setImage = function(project, type){
+		if(project === 'p1'){
+			if(type === 'desktop'){
+				$scope.p1image = '/images/project/odd-job_DesktopView.png';
+				$scope.p1isActive = "desktop";
+			}
+			else if(type === 'tablet'){
+				$scope.p1image = '/images/project/odd-job_TabletView.png';
+				$scope.p1isActive = "tablet";
+			}	
+			else if(type === 'mobile'){
+				$scope.p1image = '/images/project/odd-job_MobileView.png';
+				$scope.p1isActive = "mobile";
+			}		
+		}
+		else if(project === 'p2'){
+			if(type === 'desktop'){
+				$scope.p2image = '/images/project/odd-job_DesktopView.png';
+				$scope.p2isActive = "desktop";
+			}
+			else if(type === 'tablet'){
+				$scope.p2image = '/images/project/odd-job_TabletView.png';
+				$scope.p2isActive = "tablet";
+			}	
+			else if(type === 'mobile'){
+				$scope.p2image = '/images/project/odd-job_MobileView.png';
+				$scope.p2isActive = "mobile";
+			}		
+		};	
+	};
+});
+
+
 
 /**
  * @ngdoc controller
@@ -23,7 +79,7 @@ oddjobApp.controllers = angular
  * 
  * @description A controller used for the My Profile page.
  */
-oddjobApp.controllers.controller('ProfileCtrl', function($scope, $log,
+zachariliusApp.controllers.controller('ProfileCtrl', function($scope, $log,
 		oauth2Provider, HTTP_ERRORS, $rootScope) {
 	
 	$scope.receivedJobs = false;
@@ -168,7 +224,7 @@ oddjobApp.controllers.controller('ProfileCtrl', function($scope, $log,
  * 
  * @description A controller used for the profile detail page.
  */
-oddjobApp.controllers.controller('ProfileDetailCtrl', function($scope, $log, oauth2Provider,
+zachariliusApp.controllers.controller('ProfileDetailCtrl', function($scope, $log, oauth2Provider,
 		$routeParams, HTTP_ERRORS) {
 	$scope.profile = {};
 
@@ -215,7 +271,7 @@ oddjobApp.controllers.controller('ProfileDetailCtrl', function($scope, $log, oau
  *              authentications.
  * 
  */
-oddjobApp.controllers.controller('RootCtrl', function($scope, $location,
+zachariliusApp.controllers.controller('RootCtrl', function($scope, $location,
 		oauth2Provider) {
 
 	/**
@@ -306,7 +362,7 @@ oddjobApp.controllers.controller('RootCtrl', function($scope, $location,
  *              needs to login to achive some functions.
  * 
  */
-oddjobApp.controllers.controller('OAuth2LoginModalCtrl', function($scope,
+zachariliusApp.controllers.controller('OAuth2LoginModalCtrl', function($scope,
 		$modalInstance, $rootScope, oauth2Provider) {
 	$scope.singInViaModal = function() {
 		oauth2Provider.signIn(function() {
@@ -331,7 +387,7 @@ oddjobApp.controllers.controller('OAuth2LoginModalCtrl', function($scope,
  * 
  * @description A controller that holds properties for a datepicker.
  */
-oddjobApp.controllers
+zachariliusApp.controllers
 		.controller('DatepickerCtrl',
 				function($scope) {
 					$scope.today = function() {
@@ -376,7 +432,7 @@ oddjobApp.controllers
  * 
  * @description A controller used for the Post jobs page.
  */
-oddjobApp.controllers.controller('JobCtrl', function($scope, $log,
+zachariliusApp.controllers.controller('JobCtrl', function($scope, $log,
 		oauth2Provider, HTTP_ERRORS, formInformation) {
 
 	/**
@@ -506,7 +562,7 @@ oddjobApp.controllers.controller('JobCtrl', function($scope, $log,
  * 
  * @description A controller used for the Show job page.
  */
-oddjobApp.controllers.controller('ShowJobCtrl', function($scope, $log,
+zachariliusApp.controllers.controller('ShowJobCtrl', function($scope, $log,
 		oauth2Provider, HTTP_ERRORS) {
 
 	/**
@@ -685,7 +741,7 @@ oddjobApp.controllers.controller('ShowJobCtrl', function($scope, $log,
  * 
  * @description A controller used for the job detail page.
  */
-oddjobApp.controllers.controller('JobDetailCtrl', function($scope, $log,
+zachariliusApp.controllers.controller('JobDetailCtrl', function($scope, $log,
 		$routeParams, HTTP_ERRORS) {
 	$scope.job = {};
 
