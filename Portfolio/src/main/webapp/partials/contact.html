@@ -1,23 +1,33 @@
-<div id="contact-me" class="cont blue-background">		
-	<div class="container">		
-		<h1 class="title">Contact</h1>		
-		<div id="my-form">		
-			<form action="javascript:void(0);">		
-				<div class="form-group">		
-					<label for="emailName">Name</label>		
-					<input type="text" class="form-control" id="emailName" placeholder="Full Name" required>		
-				</div>		
-				<div class="form-group">		
-					<label for="emailSubject">Email Subject</label>		
-					<input type="text" class="form-control" id="emailSubject" placeholder="Subject" required>		
-				</div>		
-				<div class="form-group">		
-					<label for="emailBody">Message</label>		
-					<textarea class="form-control" id="emailBody" rows="10" cols="30" placeholder="Message text..." required></textarea>		
-				</div>		
-				<button id = "emailSubmit" type="submit" class="btn btn-default">Send</button>		
-			</form>		
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-5">
+			<h1 class="title">Send me an email</h1>		
+			<div id="my-form">		
+				<form action="javascript:void(0);">		
+					<div class="form-group">		
+						<label for="emailName">Name</label>		
+						<input type="text" class="form-control" id="emailName" placeholder="Full Name" required>		
+					</div>		
+					<div class="form-group">		
+						<label for="emailSubject">Email Subject</label>		
+						<input type="text" class="form-control" id="emailSubject" placeholder="Subject" required>		
+					</div>		
+					<div class="form-group">		
+						<label for="emailBody">Message</label>		
+						<textarea class="form-control" id="emailBody" rows="10" cols="30" placeholder="Message text..." required></textarea>		
+					</div>		
+					<button id = "emailSubmit" type="submit" class="btn btn-default pull-right">Send</button>		
+				</form>		
+			</div>
 		</div>		
-		<div id="contact-me_message"></div>		
-	</div>		
+		<div class="col-md-3">
+			<h1>Social Media</h1>
+			<ul class="nav nav-stacked">
+				<li><a href="https://www.linkedin.com/in/zabensley"><div class="square-skype square"><span id="skype" class="icon  icon-skype"> Skype</span></div></a></li>
+				<li><a href="https://www.linkedin.com/in/zabensley"><div class="square-linkedin square"><span id="linkedin" class="icon  icon-linkedin"> Linkedin</span></div></a></li>
+				<li><a href="https://instagram.com/zacharilius/"><div class="square-instagram square"><span id="instagram" class="icon icon-instagram"> Instagram</span></div></a></li>
+				<li><a href="https://googleplus.com"><div class="square"><span id="googleplus" class="icon icon-google-plus2"> Google+</span></div></a></li>
+			</ul>
+		</div>	</div>
 </div>
