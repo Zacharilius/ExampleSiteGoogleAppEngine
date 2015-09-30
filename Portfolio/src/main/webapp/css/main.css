@@ -84,6 +84,12 @@ a:focus, a:hover {
 #instagram:hover, #instagram:focus{
 	color:#F15E5E;
 }
+#skype:hover, #skype:focus{
+	color:#00AFF0;
+}
+#googleplus:hover, #googleplus:focus{
+	color:#DC4937;
+}
 #contactme:hover, #contactme:focus{
 	color:#F6590C;
 }
@@ -179,7 +185,6 @@ a:focus, a:hover {
 }
 .picture-container{
 	overflow: hidden;
-	height: 400px;
 	margin: 0 auto;
 }
 
@@ -187,7 +192,8 @@ a:focus, a:hover {
 	padding-top: 20px;
 }
 .project-image{
-    height: 100%;
+    width: auto;
+    max-height: 450px;
     display: inline;
 }
 .project-button-img{
@@ -198,17 +204,30 @@ a:focus, a:hover {
 	text-align: left;
 }
 .screenType{
-	color: #FFFFFF;
+	color: #005D53;
 	font-size: 35px;
 	margin:0px 0px 0px 0px;
 	padding:0px 0px 0px 0px;
 	display: block;
 }
-.screenType:hover{
+@media screen and (max-width: 768px) {
+   .screenType{
 	color: #005D53;
+	font-size: 35px;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	display: inline
+	}
+ }
+.screenType:hover{
+	color: #FFFFFF;
 }
 .screenType:active, .screenType.active {
-	color: #005D53;
+	color: #FFFFFF;
+}
+.contact-socialmedia{
+	font-size: 20px;
+	vertical-align: top;
 }
 .btn.active, .btn:active {
 	box-shadow: none;	

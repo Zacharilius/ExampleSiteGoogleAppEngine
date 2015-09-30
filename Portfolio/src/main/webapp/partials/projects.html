@@ -1,15 +1,15 @@
 <div class="container-fluid" ng-controller="ProjectsCtrl">
 <div class="project">
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-sm-8">
 			<div class="picture-container"><img class="picture-item project-image img-responsive" ng-src="{{p1image}}" alt="Right Image Issue"></div>	
 		</div>
-		<div class="col-md-1">
+		<div class="col-sm-1 col-xs-12">
 			<div ng-click='setImage("p1", "desktop")'class="screenType btn" ng-class="isActive('p1', 'desktop')"><span class="icon-display"></span></div>
 			<div ng-click='setImage("p1", "tablet")' class="screenType btn" ng-class="isActive('p1', 'tablet')"><span class="icon-tablet"></span></div>
 			<div ng-click='setImage("p1", "mobile")'class="screenType btn" ng-class="isActive('p1', 'mobile')"><span class="icon-mobile2"></span></div>			
 		</div>
-		<div class="col-md-3 ">
+		<div class="col-sm-3">
 			<h1 class="title">Odd-Job</h1>		
 			<p class="project-text">Odd-Job is a job posting site that specializes in odd jobs. It allows users to find and
 			post odd-jobs around the Greater Seattle Area. It uses AngularJS, HTML5, CSS3, GoogleMapsAPI, and Java Google Endpoints to display,
