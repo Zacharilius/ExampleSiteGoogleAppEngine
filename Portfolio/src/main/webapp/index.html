@@ -15,6 +15,23 @@
   <link rel=stylesheet type="text/css" href="/css/main.css">  
 </head>
 <body>
+<nav>
+<div class="container">
+	<ul class="list-inline pull-left">	
+		<li><a class="tooltip-message" href="#/" data-toggle="tooltip" data-placement="bottom" title="Home"><div class="square"><span id="home" class="icon icon-home3"></span></div></a></li>
+		<li><a class="tooltip-message" href="#/projects" data-toggle="tooltip" data-placement="bottom" title="Projects"><div class="square"><span id="projects" class="icon icon-sphere"></span></div></a></li>
+		<li><a class="tooltip-message" href="#/maps" data-toggle="tooltip" data-placement="bottom" title="Maps!"><div class="map-circle circle"><span id="earth" class="icon icon-earth"></span></div></a></li>
+		<li><a class="tooltip-message" href="#/contact" data-toggle="tooltip" data-placement="bottom" title="Contact"><div class="square"><span id="contactme" class="icon icon-envelop"></span></div></a></li>
+	</ul>
+	<ul class="list-inline pull-right nav-hide">
+		<li><a class="tooltip-message" href="http://www.github.com/zacharilius" data-toggle="tooltip" data-placement="bottom" title="Github"><div class=" circle"><span id="github" class="icon icon-github"></span></div></a></li>
+		<li><a class="tooltip-message" href="http://codepen.io/zacharilius/" data-toggle="tooltip" data-placement="bottom" title="Codepen"><div class="square"><span id="codepen" class="icon icon-codepen"></span></div></a></li>		
+		<li><a class="tooltip-message" href="https://www.linkedin.com/in/zabensley" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><div class="square-linkedin square"><span id="linkedin" class="icon  icon-linkedin"></span></div></a></li>
+		<li><a class="tooltip-message" href="https://instagram.com/zacharilius/" data-toggle="tooltip" data-placement="bottom" title="Instagram"><div class="square-instagram square"><span id="instagram" class="icon icon-instagram"></span></div></a></li>
+	</ul>	
+</div>	
+</nav>
+
 	<ng-view>
 	</ng-view>
 
@@ -44,6 +61,11 @@
 <script src="/js/app.js"></script>
 <script src="/js/controllers.js"></script>
 <script src="/js/main.js"></script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
 <!-- Put the signInButton to invoke the gapi.signin.render to restore the credential if stored in cookie. -->
 <span id="signInButton" style="display: none" disabled="true"></span>
 

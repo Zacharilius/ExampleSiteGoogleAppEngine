@@ -8,11 +8,6 @@
 .divider-color         { border-color: #B6B6B6; }
 
 
-
-.header-text{
-	padding-top: 3%;
-}
-
 .nav-buttons{
 	position: fixed;
 	top: 1%;
@@ -33,7 +28,7 @@ body{
   background-color: #009688;
   color: #FFFFFF;
   margin: 0 auto;
-  overflow-y scroll;
+  overflow-y: scroll;
 }
 
 /* Tooltip */
@@ -190,6 +185,7 @@ a:focus, a:hover {
 
 .project{
 	padding-top: 20px;
+	margin-bottom: 40px;
 }
 .project-image{
     width: auto;
@@ -231,4 +227,10 @@ a:focus, a:hover {
 }
 .btn.active, .btn:active {
 	box-shadow: none;	
+}
+
+@media screen and (max-width:450px){
+	.nav-hide{
+		display: none;
+	}
 }
