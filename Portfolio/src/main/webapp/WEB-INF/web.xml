@@ -42,12 +42,12 @@
         </auth-constraint>
     </security-constraint>
      <servlet>
-       <servlet-name>SendConfirmationEmailServlet</servlet-name>
-       <servlet-class>me.zacharilius.servlet.SendConfirmationEmailServlet</servlet-class>
+       <servlet-name>SendEmailServlet</servlet-name>
+       <servlet-class>me.zacharilius.servlet.SendEmailServlet</servlet-class>
    </servlet>
    <servlet-mapping>
-       <servlet-name>SendConfirmationEmailServlet</servlet-name>
-       <url-pattern>/tasks/send_confirmation_email</url-pattern>
+       <servlet-name>SendEmailServlet</servlet-name>
+       <url-pattern>/tasks/send_email</url-pattern>
    </servlet-mapping> 
    <security-constraint>
        <web-resource-collection>

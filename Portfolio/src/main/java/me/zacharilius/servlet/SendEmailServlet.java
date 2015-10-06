@@ -21,30 +21,35 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class SendConfirmationEmailServlet
  */
-public class SendConfirmationEmailServlet extends HttpServlet {
+public class SendEmailServlet extends HttpServlet {
        
-    private static final Logger Log = Logger.getLogger(SendConfirmationEmailServlet.class.getName());
+    private static final Logger Log = Logger.getLogger(SendEmailServlet.class.getName());
 
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String email = request.getParameter("email");
-		String conferenceInfo = request.getParameter("conferenceInfo");
+		String emailAddress = request.getParameter("emailAddress");
+		String subject = request.getParameter("subject");
+		String messageText = request.getParameter("message");
+		String name = request.getParameter("name");
+		
+		String myEmail = "zabensley@gmail.com";
+		
 		Properties props = new Properties();
 		
 		Session session = Session.getDefaultInstance(props, null);
-		String body = "Hi, you have created the following conference. \n" + conferenceInfo;
+		String body = messageText + "\n\n FROM: " + name;
 		try{
 			Message message = new MimeMessage(session);
 			InternetAddress from = new InternetAddress(
 					String.format("noreply@%s.appspotmail.com", 
-							SystemProperty.applicationId.get()), "Conference Central");
+							SystemProperty.applicationId.get()), "Zacharilius Portfolio");
 			message.setFrom(from);
-			message.addRecipient(Message.RecipientType.TO, new InternetAddress(email, ""));
-			message.setSubject("You created a new Conference!");
+			message.addRecipient(Message.RecipientType.TO, new InternetAddress(myEmail, ""));
+			message.setSubject(subject);
 			message.setText(body);
 			Transport.send(message);
 		} catch(MessagingException e){
-			Log.log(Level.WARNING, String.format("Failed to send an email to %s", email), e);
+			Log.log(Level.WARNING, String.format("Failed to send an email from %s", emailAddress), e);
 			throw new RuntimeException(e);
 		}
 		response.getWriter().append("Served at: ").append(request.getContextPath());

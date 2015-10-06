@@ -12,7 +12,7 @@
  *
  */
 var app = angular.module('zachariliusApp',
-		['zachariliusControllers', 'ngRoute', 'ui.bootstrap', 'ngAnimate']).
+		['portfolioControllers', 'ngRoute', 'ui.bootstrap', 'ngAnimate', 'ngMap']).
 		config(['$routeProvider',
 		        function ($routeProvider) {
 			            $routeProvider.
@@ -22,11 +22,11 @@ var app = angular.module('zachariliusApp',
 				            }).                
 				            when('/contact', {
 			                    templateUrl: '/partials/contact.html',
-			                    controller: 'ProfileCtrl'
+			                    controller: 'ContactCtrl'
 			                }).
 			                when('/maps', {
 			                    templateUrl: '/partials/maps.html',
-			                    controller: 'JobCtrl'
+			                    controller: 'MapCtrl'
 			                }).
 			                when('/', {
 			                    templateUrl: '/partials/home.html'
@@ -69,22 +69,6 @@ app.filter('startFrom', function () {
  */
 app.constant('HTTP_ERRORS', {
     'UNAUTHORIZED': 401
-});
-
-app.constant('formInformation',{
-	cities : [ 'Seattle', 'Redmond', 'Bellevue', 'Clyde HIll',
-	      			'Issaquah', 'Medina', 'Mercer Island', 'Newcastle', 'Sammamish',
-	      			'Woodinville', 'Bothell', 'Edmonds', 'Kenmore', 'Lake Forest Park',
-	      			'Shoreline', 'Kirkland', 'Renton' ],
-	states: [ 'Washington' ]
-
-});
-
-/**
- * 
- */
-app.factory('jobProvider', function(){
-	
 });
 
 

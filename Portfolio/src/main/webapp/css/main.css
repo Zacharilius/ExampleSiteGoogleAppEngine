@@ -21,7 +21,9 @@
 	margin:0px 0px 0px 0px;
 	padding:0px 0px 0px 0px;
 }
-
+html{
+	height: 100%;
+}
 body{
   text-align: center;
   font-family: Pacifo, sans-serif;
@@ -29,6 +31,7 @@ body{
   color: #FFFFFF;
   margin: 0 auto;
   overflow-y: scroll;
+  height: 100%;
 }
 
 /* Tooltip */
@@ -233,4 +236,26 @@ a:focus, a:hover {
 	.nav-hide{
 		display: none;
 	}
+}
+
+.form-label{
+	text-align: left;
+}
+
+
+
+.map  {
+
+}
+
+.ng-view-max{
+	height:100%;
+}
+
+div[ng-controller=MapCtrl] {
+  position:relative;
+  height: 100%;
+}
+div[ng-controller=MapCtrl] #panel{
+  height:100%;
 }

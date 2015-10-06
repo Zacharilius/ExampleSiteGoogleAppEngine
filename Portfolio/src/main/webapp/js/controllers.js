@@ -14,9 +14,58 @@ var zachariliusApp = zachariliusApp || {};
  * @description Angular module for controllers.
  * 
  */
-zachariliusApp.controllers = angular
-		.module('zachariliusControllers', [ 'ui.bootstrap' ]);
+zachariliusApp.controllers = angular.module('portfolioControllers', [ 'ui.bootstrap' ]);
 
+zachariliusApp.controllers.controller('ContactCtrl', 
+		function ($scope, HTTP_ERRORS) {
+	$scope.loading = false;
+	$scope.email = $scope.email || {};
+
+    $scope.isValidEmailForm = function (emailForm) {
+        return emailForm.$valid;
+    }	
+	
+	$scope.sendEmail = function(emailForm){
+		console.log(emailForm);
+		console.log($scope.email);
+        if (!$scope.isValidEmailForm(emailForm)) {
+            return;
+        }		
+		
+		$scope.loading = true;
+		gapi.client.portfolio.sendEmail($scope.email).
+            execute(function (resp) {
+                $scope.$apply(function () {
+                	if(resp.error){
+                		//Error when sending email
+                        var errorMessage = resp.error.message || '';
+                        $scope.messages = 'Failed to send the email : ' + errorMessage;
+                        $scope.alertStatus = 'warning';
+                    } else{
+                    	console.log(resp);
+                		//Email send successfully
+                    	$scope.messages = "Email sent successfully";
+                    	$scope.alertStatus = "success";
+                        $scope.emailForm = {};
+                		
+                	}
+                    $scope.loading = false;
+                });
+			});
+		}
+});
+
+zachariliusApp.controllers.controller('MapCtrl', function($scope){
+	$scope.onMouseover = function(event) {
+	    var fillArray = ['red', 'blue', 'yellow', 'green'];
+	    var style = this.getFeatureStyle(event.featureId); 
+	    style.fillColor = fillArray[event.featureId - 1];
+	    style.fillOpacity = '0.8';
+	  };
+	  $scope.onMouseout = function(event) {
+	    var style = this.getFeatureStyle(event.featureId).resetAll();
+	  };
+});
 
 zachariliusApp.controllers.controller('ProjectsCtrl', function($scope){
 	$scope.p1isActive = "desktop";
@@ -218,50 +267,7 @@ zachariliusApp.controllers.controller('ProfileCtrl', function($scope, $log,
 				});
 	};
 });
-/**
- * @ngdoc controller
- * @name ProfileDetailCtrl
- * 
- * @description A controller used for the profile detail page.
- */
-zachariliusApp.controllers.controller('ProfileDetailCtrl', function($scope, $log, oauth2Provider,
-		$routeParams, HTTP_ERRORS) {
-	$scope.profile = {};
 
-	$scope.isUserAttending = false;
-
-	/**
-	 * Initializes the oddjob detail page. Invokes the oddjob.getoddjob method
-	 * and sets the returned oddjob in the $scope.
-	 * 
-	 */
-	$scope.init = function() {
-		$scope.loading = true;
-		gapi.client.oddjob.getProfileDetail({
-			websafeProfileKey : $routeParams.websafeProfileKey
-		}).execute(
-				function(resp) {
-					$scope.$apply(function() {
-						$scope.loading = false;
-						if (resp.error) {
-							// The request has failed.
-							var errorMessage = resp.error.message || '';
-							$scope.messages = 'Failed to get the profile : '
-									+ $routeParams.websafeProfileKey + ' '
-									+ errorMessage;
-							$scope.alertStatus = 'warning';
-							$log.error($scope.messages);
-						} else {
-							// The request has succeeded.
-							$scope.alertStatus = 'success';
-							console.log(resp.result);
-							$scope.profile = resp.result;
-						}
-					});
-				});
-	};
-
-});
 /**
  * @ngdoc controller
  * @name RootCtrl

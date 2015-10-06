@@ -30,6 +30,7 @@ import me.zacharilius.Constants;
 import me.zacharilius.domain.Announcement;
 import me.zacharilius.domain.Job;
 import me.zacharilius.domain.Profile;
+import me.zacharilius.form.EmailForm;
 import me.zacharilius.form.JobForm;
 import me.zacharilius.form.ProfileForm;
 /**
@@ -243,42 +244,43 @@ public class PortfolioApi {
  * @param jobForm A JobForm object representing user's inputs.
  * @return A newly created Job Object.
  * @throws UnauthorizedException when the user is not signed in.
+ * @throws ConflictException 
  */
-@ApiMethod(name = "createJob", path = "job", httpMethod = HttpMethod.POST)
-public Job createJob(final User user, final JobForm jobForm)
-    throws UnauthorizedException {
-    if (user == null) {
-        throw new UnauthorizedException("Authorization required");
+@ApiMethod(name = "sendEmail", path = "sendEmail", httpMethod = HttpMethod.POST)
+public EmailForm sendEmail(final EmailForm emailForm)
+    throws UnauthorizedException, ConflictException {
+
+	if(emailForm.getEmailAddress() == null){
+        throw new ConflictException("You must enter an email address");
     }
-    final String userId = user.getUserId();
-    Key<Profile> profileKey = Key.create(Profile.class, userId);
-    final Key<Job> jobKey = factory().allocateId(profileKey, Job.class);
-    final long jobId = jobKey.getId();
-    final Queue queue = QueueFactory.getDefaultQueue();
+	if(emailForm.getMessage() == null){
+        throw new ConflictException("You must enter a message");
+	}
+	if(emailForm.getName() == null){
+        throw new ConflictException("You must enter a name");
+	}	
+	if(emailForm.getSubject() == null){
+        throw new ConflictException("You must enter an email subject");
+	}    
+	
+	final Queue queue = QueueFactory.getDefaultQueue();
     
-    if(jobForm.getTags() == null){
-    	System.out.println("It's null woops");
-    }
-    else{
-    	System.out.println("\n\n" + jobForm.getTags().toString() +"\n\n");
-    }
+
     // Start transactions
-    Job job = ofy().transact(new Work<Job>(){
+    EmailForm email = ofy().transact(new Work<EmailForm>(){
     	@Override
-    	public Job run(){
-            Profile profile = getProfileFromUser(user);
-    		Job job = new Job(jobId, userId, jobForm);
-            ofy().save().entities(profile, job).now();
-            /*
+    	public EmailForm run(){
+            
             queue.add(ofy().getTransaction(),
-            		TaskOptions.Builder.withUrl("/tasks/send_confirmation_email")
-            		.param("email",  profile.getMainEmail())
-            		.param("conferenceInfo", conference.toString()));
-            */
-            return job;
+            		TaskOptions.Builder.withUrl("/tasks/send_email")
+            		.param("emailAddress",  emailForm.getEmailAddress())
+            		.param("message", emailForm.getMessage())
+            		.param("subject", emailForm.getSubject())
+            		.param("name", emailForm.getName()));
+            return emailForm;
     	}
     }); 
-    return job;
+    return email;
 }
 /**
  * Queries the datastore for all jobs the user created
