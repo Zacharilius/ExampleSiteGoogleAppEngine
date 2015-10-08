@@ -16,18 +16,10 @@
 		<a href="https://www.google.com/fusiontables/DataSource?docid=1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN"><div class="btn btn-default btn-map">Add Breweries</div></a>
 	</div>
 	<div class="map-container map-even">
-		<h2>Seattle Breweries</h2>
-		<h5>An interactive map that uses fusion tables and ng-map.</h5>
+		<h2>Seattle Neighborhood Mapper</h2>
+		<h5>Using Zillow neighborhood data, people can identify their neighborhoods.</h5>
 		<map zoom="11" center="47.6097, -122.3331">
-			<fusion-tables-layer query="{
-				select: 'name, location, logo',
-				from: '1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN'}",
-				options= "{
-	            styleId: 2,
-	            templateId: 2
-	        }"
-				>
-			</fusion-tables-layer>
+  			<map-data set-style="{fillColor: 'green', strokeWeight: 1}" load-geo-json="/geoJson/ZillowNeighborhoods-WA.json"></map-data>
 		</map>
 		<a href="https://www.google.com/fusiontables/DataSource?docid=1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN"><div class="btn btn-default btn-map">Add Breweries</div></a>
 	</div>
@@ -35,31 +27,15 @@
 		<h2>Seattle Breweries</h2>
 		<h5>An interactive map that uses fusion tables and ng-map.</h5>
 		<map zoom="11" center="47.6097, -122.3331">
-			<fusion-tables-layer query="{
-				select: 'name, location, logo',
-				from: '1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN'}",
-				options= "{
-	            styleId: 2,
-	            templateId: 2
-	        }"
-				>
-			</fusion-tables-layer>
+  			<map-data set-style="{fillColor: 'green', strokeWeight: 1}" load-geo-json="/geoJson/washingtonHoods.json"></map-data>
 		</map>
 		<a href="https://www.google.com/fusiontables/DataSource?docid=1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN"><div class="btn btn-default btn-map">Add Breweries</div></a>
 	</div>
 	<div class="map-container map-even">
 		<h2>Seattle Breweries</h2>
 		<h5>An interactive map that uses fusion tables and ng-map.</h5>
-		<map zoom="11" center="47.6097, -122.3331">
-			<fusion-tables-layer query="{
-				select: 'name, location, logo',
-				from: '1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN'}",
-				options= "{
-	            styleId: 2,
-	            templateId: 2
-	        }"
-				>
-			</fusion-tables-layer>
+		<map zoom="4" center="-28, 137.883">
+  			<map-data set-style="{fillColor: 'green', strokeWeight: 1}" load-geo-json="/geoJson/google.json"></map-data>
 		</map>
 		<a href="https://www.google.com/fusiontables/DataSource?docid=1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN"><div class="btn btn-default btn-map">Add Breweries</div></a>
 	</div>
