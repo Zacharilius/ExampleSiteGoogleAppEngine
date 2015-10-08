@@ -7,14 +7,21 @@
 .secondary-text-color  { color: #727272; }
 .divider-color         { border-color: #B6B6B6; }
 
-
+nav{
+	padding-top: 10px;
+	background-color: #00796B;
+}
+.navbar-default {
+    background-color: transparent;
+}
+.navbar{
+    border-bottom: 1px solid #FFC107;
+}
 .nav-buttons{
 	position: fixed;
 	top: 1%;
 	right: 1%;
 }
-
-
 .icon{
 	color: #FFFFFF;
 	font-size: 35px;
@@ -48,9 +55,6 @@ body{
 /* Tooltip on bottom */
 .tooltip-message + .tooltip.bottom > .tooltip-arrow {
     border-bottom: 5px solid transparent;
-}
-ul{
-	margin-bottom: 40px;
 }
 a:focus, a:hover {
     text-decoration: none;
@@ -243,19 +247,42 @@ a:focus, a:hover {
 }
 
 
-
-.map  {
-
-}
-
-.ng-view-max{
-	height:100%;
-}
-
 div[ng-controller=MapCtrl] {
-  position:relative;
-  height: 100%;
+	position:relative;
 }
 div[ng-controller=MapCtrl] #panel{
-  height:100%;
+	height:100%;
 }
+.googft-info-window{
+	text-align: left;
+	color: #212121;
+}
+.map-container{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.ng-view-max{
+	margin-top: 0px;
+}
+.map-even{
+    color: #666;
+	background-color: #FAFAFA;
+}
+.map-odd{
+	background-color: #009688;
+}
+.btn-map{
+    color: #FFFFFF;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: #FFC107;
+	border-color: #FFC107;
+}
+.btn-map:hover, .btn-map:focus{
+    color: #FFFFFF;
+	background-color: #E4AC00;
+	border-color: #E4AC00;
+}
+

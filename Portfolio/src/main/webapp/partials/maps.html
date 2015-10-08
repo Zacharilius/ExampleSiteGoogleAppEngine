@@ -1,8 +1,66 @@
-<div class="map" ng-controller="MapCtrl">
-<map class="map" zoom="11" center="47.605639, -122.21858">
-  <fusion-tables-layer query="{
-    select: 'col2',
-    from: '1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN'}">
-  </fusion-tables-layer>
-</map>
+<div ng-controller="MapCtrl">
+	<div class="map-container map-odd" style="	padding-top: 0px;">
+		<h2>Seattle Breweries</h2>
+		<h5>An interactive map that uses fusion tables and ng-map.</h5>
+		<map zoom="11" center="47.6097, -122.3331">
+			<fusion-tables-layer query="{
+				select: 'name, location, logo',
+				from: '1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN'}",
+				options= "{
+	            styleId: 2,
+	            templateId: 2
+	        }"
+				>
+			</fusion-tables-layer>
+		</map>
+		<a href="https://www.google.com/fusiontables/DataSource?docid=1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN"><div class="btn btn-default btn-map">Add Breweries</div></a>
+	</div>
+	<div class="map-container map-even">
+		<h2>Seattle Breweries</h2>
+		<h5>An interactive map that uses fusion tables and ng-map.</h5>
+		<map zoom="11" center="47.6097, -122.3331">
+			<fusion-tables-layer query="{
+				select: 'name, location, logo',
+				from: '1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN'}",
+				options= "{
+	            styleId: 2,
+	            templateId: 2
+	        }"
+				>
+			</fusion-tables-layer>
+		</map>
+		<a href="https://www.google.com/fusiontables/DataSource?docid=1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN"><div class="btn btn-default btn-map">Add Breweries</div></a>
+	</div>
+	<div class="map-container map-odd">
+		<h2>Seattle Breweries</h2>
+		<h5>An interactive map that uses fusion tables and ng-map.</h5>
+		<map zoom="11" center="47.6097, -122.3331">
+			<fusion-tables-layer query="{
+				select: 'name, location, logo',
+				from: '1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN'}",
+				options= "{
+	            styleId: 2,
+	            templateId: 2
+	        }"
+				>
+			</fusion-tables-layer>
+		</map>
+		<a href="https://www.google.com/fusiontables/DataSource?docid=1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN"><div class="btn btn-default btn-map">Add Breweries</div></a>
+	</div>
+	<div class="map-container map-even">
+		<h2>Seattle Breweries</h2>
+		<h5>An interactive map that uses fusion tables and ng-map.</h5>
+		<map zoom="11" center="47.6097, -122.3331">
+			<fusion-tables-layer query="{
+				select: 'name, location, logo',
+				from: '1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN'}",
+				options= "{
+	            styleId: 2,
+	            templateId: 2
+	        }"
+				>
+			</fusion-tables-layer>
+		</map>
+		<a href="https://www.google.com/fusiontables/DataSource?docid=1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN"><div class="btn btn-default btn-map">Add Breweries</div></a>
+	</div>
 </div>

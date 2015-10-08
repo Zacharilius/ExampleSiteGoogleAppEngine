@@ -50,6 +50,7 @@ zachariliusApp.controllers.controller('ContactCtrl',
                 		
                 	}
                     $scope.loading = false;
+                    $scope.email = {};
                 });
 			});
 		}
