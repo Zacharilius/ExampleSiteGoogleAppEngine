@@ -59,16 +59,16 @@ body{
 a:focus, a:hover {
     text-decoration: none;
 }
-#sun:hover, #sun:focus{
+#sun:hover, #sun:focus, #sun:active{
 	color:#F4CC0A;
 }
-#night:hover, #night:focus{
+#night:hover, #night:focus, #night:active{
 	color:#FBF619;
 }
-#rain:hover, #rain:focus{
+#rain:hover, #rain:focus, #rain:active{
 	color:#03DDFF;
 }
-#projects:hover, #projects:focus{
+#projects:hover, #projects:focus, #projects:active{
 	color:#FFC107;
 }
 #github:hover, #github:focus{
@@ -77,7 +77,7 @@ a:focus, a:hover {
 #codepen:hover, #codepen:focus{
 	color:#000;
 }
-#home:hover, #home:focus{
+#home:hover, #home:focus, #home:active{
 	color:#B91787;
 }
 #linkedin:hover, #linkedin:focus{
@@ -92,10 +92,10 @@ a:focus, a:hover {
 #googleplus:hover, #googleplus:focus{
 	color:#DC4937;
 }
-#contactme:hover, #contactme:focus{
+#contactme:hover, #contactme:focus, #contactme:active{
 	color:#F6590C;
 }
-#earth:hover, #earth:focus{
+#earth:hover, #earth:focus, #earth:active{
 	color:#73d216;
 }
 .square-instagram:hover, .square-instagram:focus{
@@ -104,7 +104,7 @@ a:focus, a:hover {
 .square-linkedin:hover, .square-linkedin:focus{
 	background: #FFFFFF;	
 }
-.square:hover, .square:focus{
+.square:hover, .square:focus, .square:active{
 	width: 35px;
 	height: 35px;
 	-moz-border-radius: 25%;
@@ -114,10 +114,10 @@ a:focus, a:hover {
 	padding:0px 0px 0px 0px;
 }
 
-.map-circle:hover, .map-circle:focus{
+.map-circle:hover, .map-circle:focus, .map-circle:active{
 	background: #2072C9;
 }
-.circle:hover, .circle:focus{
+.circle:hover, .circle:focus, .circle:active{
 	width: 35px;
 	height: 35px;
 	-moz-border-radius: 50%;
