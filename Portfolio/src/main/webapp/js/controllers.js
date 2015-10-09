@@ -109,47 +109,99 @@ zachariliusApp.controllers.controller('MapNeighborhoodCtrl', function($scope){
 	};
 });
 zachariliusApp.controllers.controller('StarbucksController', function($scope, $http, StreetView) {
-    $scope.map;
-    $scope.stores = [];
-    $scope.$on('mapInitialized', function(event, evtMap) {
-      map = evtMap;
-      $scope.map = map;
-      console.log('loading scripts/starbucks.json');
-      $http.get('/geoJson/starbucks.json').success( function(stores) {
-        for (var i=0; i<stores.length; i++) {
-          var store = stores[i];
-          store.position = new google.maps.LatLng(store.latitude,store.longitude);
-          store.title = store.name;
-          var marker = new google.maps.Marker(store);
-          google.maps.event.addListener(marker, 'click', function() {
-            $scope.store = this;
-            StreetView.getPanorama(map).then(function(panoId) {
-              $scope.panoId = panoId;
-            });
-            map.setZoom(18);
-            map.setCenter(this.getPosition());
-            $scope.storeInfo.show();
-          });
-          google.maps.event.addListener(map, 'click', function() {
-            $scope.storeInfo.hide();
-          });
-          $scope.stores.push(marker); 
-        }
-        console.log('finished loading scripts/starbucks.json', '$scope.stores', $scope.stores.length);
-        $scope.markerClusterer = new MarkerClusterer(map, $scope.stores, {});
-        $scope.fullScreenToggle.click();
-      });
-    });
-    $scope.showStreetView = function() {
-      StreetView.setPanorama(map, $scope.panoId);
-      $scope.storeInfo.hide();
-    };
-    $scope.showHybridView = function() {
-      map.setMapTypeId(google.maps.MapTypeId.HYBRID);
-      map.setTilt(45);
-      $scope.storeInfo.hide();
-    }
- });
+	$scope.zoom = 11;
+	$scope.center = "47.6097, -122.3331";
+	$scope.scrollwheel = "false";
+	
+	$scope.map;
+	$scope.stores = [];
+	$scope.$on('mapInitialized', function(event, evtMap) {
+		var map = evtMap;
+		$scope.map = map;
+		console.log('loading scripts/starbucks.json');
+		$http.get('/geoJson/starbucks.json').success( function(stores) {
+			for (var i=0; i<stores.length; i++) {
+				var store = stores[i];
+				store.position = new google.maps.LatLng(store.latitude,store.longitude);
+				store.title = store.name;
+	
+				var marker = new google.maps.Marker(store);
+				google.maps.event.addListener(marker, 'click', function() {
+					$scope.store = this;
+					StreetView.getPanorama(map).then(function(panoId) {
+						$scope.panoId = panoId;
+					});
+					map.setZoom(18);
+					map.setCenter(this.getPosition());
+					$scope.storeInfo.show();
+				});
+				google.maps.event.addListener(map, 'click', function() {
+					$scope.storeInfo.hide();
+				});
+	
+				$scope.stores.push(marker); 
+			}
+			console.log('finished loading scripts/starbucks.json', '$scope.stores', $scope.stores.length);
+			$scope.markerClusterer = new MarkerClusterer(map, $scope.stores, {});
+		});
+	});
+	$scope.showStreetView = function() {
+		StreetView.setPanorama(map, $scope.panoId);
+		$scope.storeInfo.hide();
+	};
+	$scope.showHybridView = function() {
+		map.setMapTypeId(google.maps.MapTypeId.HYBRID);
+		map.setTilt(45);
+		$scope.storeInfo.hide();
+	}
+});
+zachariliusApp.controllers.controller('SeattleBreweriesController', function($scope, $http, StreetView) {
+	$scope.zoom = 11;
+	$scope.center = "47.6097, -122.3331";
+	$scope.scrollwheel = "false";
+	
+	$scope.map;
+	$scope.stores = [];
+	$scope.$on('mapInitialized', function(event, evtMap) {
+		var map = evtMap;
+		$scope.map = map;
+		console.log('loading scripts/starbucks.json');
+		$http.get('/geoJson/seattleBreweries.json').success( function(stores) {
+			for (var i=0; i<stores.length; i++) {
+				var store = stores[i];
+				store.position = new google.maps.LatLng(store.latitude,store.longitude);
+				store.title = store.name;
+	
+				var marker = new google.maps.Marker(store);
+				google.maps.event.addListener(marker, 'click', function() {
+					$scope.store = this;
+					StreetView.getPanorama(map).then(function(panoId) {
+						$scope.panoId = panoId;
+					});
+					map.setZoom(18);
+					map.setCenter(this.getPosition());
+					$scope.storeInfo.show();
+				});
+				google.maps.event.addListener(map, 'click', function() {
+					$scope.storeInfo.hide();
+				});
+	
+				$scope.stores.push(marker); 
+			}
+			console.log('finished loading scripts/starbucks.json', '$scope.stores', $scope.stores.length);
+			$scope.markerClusterer = new MarkerClusterer(map, $scope.stores, {});
+		});
+	});
+	$scope.showStreetView = function() {
+		StreetView.setPanorama(map, $scope.panoId);
+		$scope.storeInfo.hide();
+	};
+	$scope.showHybridView = function() {
+		map.setMapTypeId(google.maps.MapTypeId.HYBRID);
+		map.setTilt(45);
+		$scope.storeInfo.hide();
+	}
+});
 zachariliusApp.controllers.controller('ProjectsCtrl', function($scope){
 	$scope.p1isActive = "desktop";
 	$scope.p2isActive = "desktop";

@@ -1,0 +1,201 @@
+{"breweries":
+[{"name":"192 Brewing,Kenmore","url":"http://192brewing.com","latitude":47.776567, "longitude":-122.235089}
+,{"name":"5s Rights Brewing Company,Marysville","url":"http://www.5RightsBrewing.com","latitude":48.037253, "longitude":-122.136162}
+,{"name":"Adams Northwest Bistro and Brewery,Monroe","url":"http://adamsnwbistro.com","latitude":47.8559031, "longitude":-121.9709}
+,{"name":"American Brewing,Edmonds","url":"http://americanbrewing.com","latitude":47.808782, "longitude":-122.386851}
+,{"name":"Anacortes Brewery,Anacortes","url":"http://anacortesrockfish.com","latitude":48.519312, "longitude":-122.612594}
+,{"name":"Anacortes Brewery - H2O,Anacortes","url":"http://anacortesh2o.com","latitude":48.519348, "longitude":-122.61284}
+,{"name":"Aslan Brewing Co.,Bellingham","url":"http://aslanbrewing.com","latitude":48.748395, "longitude":-122.474484}
+,{"name":"At Large Brewing,Marysville","url":"http://www.atlargebrewing.com/","latitude":48.023134, "longitude":-122.12553}
+,{"name":"Beardslee Public House,Bothell","latitude": "none","latitude":47.7685282, "longitude":-122.19129}
+,{"name":"Beta Brewing,Everett","url":"http://betabrewing.com","latitude":47.9501342, "longitude":-122.19448380}
+,{"name":"Big E Ales,Lynwood","url":"http://bigeales.com","latitude":47.81001, "longitude":-122.3021}
+,{"name":"Birdsview Brewing,Concrete","url":"http://birdsviewbrewingcompany.com","latitude":48.5285339, "longitude":-121.9125768}
+,{"name":"Blue Lightning Brewing,Woodinville","url":"http://www.bluelightningbrew.com/","latitude":47.7683859, "longitude":-122.147751}
+,{"name":"Boundary Bay Brewery and Bistro,Bellingham","url":"http://bbaybrewery.com","latitude":48.7474876, "longitude":-122.4806582}
+,{"name":"Brickyard Brewing,Woodinville","url":"http://brickyardbrewing.com","latitude":47.782434, "longitude":-122.15445}
+,{"name":"Chuckanut Brewery and Kitchen,Bellingham","url":"http://chuckanutbreweryandkitchen.com","latitude":48.7535207, "longitude":-122.485131}
+,{"name":"Diamond Knot Brewpub @ MLT,Mountlake Terrace","url":"http://www.diamondknot.com/restaurants/2088-2/,47.7878846","latitude": -122.3095406}
+,{"name":"Diamond Knot Craft Brewing,Mukilteo","url":"http://diamondknot.com","latitude":47.9485882, "longitude":-122.3046861}
+,{"name":"Diamond Knot Production Brewery & Taproom,Mukilteo","url":"http://www.diamondknot.com/the-beer/the-brewery/","latitude":47.895478, "longitude":-122.295697}
+,{"name":"Dirty Bucket Brewing,Woodinville","url":"http://dirtybucketbrewery.com","latitude":47.76629, "longitude":-122.148220}
+,{"name":"Dreadnought Brewing,Monroe","url":"http://www.dreadnoughtbrewing.com","latitude":47.8640789, "longitude":-122.006302}
+,{"name":"Duvall Springs Brewing,Duvall","url":"http://www.duvallspringsbrewing.com","latitude":47.762724, "longitude":-121.955581}
+,{"name":"Foggy Noggin Brewing,Bothell","url":"http://foggynogginbrewing.com","latitude":47.794472, "longitude":-122.160868}
+,{"name":"Gallagher&rsquo;s Where-U-Brew,Edmonds","url":"http://whereubrew.com","latitude":47.80885, "longitude":-122.38686}
+,{"name":"Headknocker Brewery ,Monro","url":"http://,47.855263","latitude": -121.844247}
+,{"name":"In The Shadow Brewing ,Arlington","url":"http://www.facebook.com/InTheShadowBrewing","latitude":48.10614, "longitude":-121.994695}
+,{"name":"Justice Brewing,Everett","url":"http://www.justicebrewing.com/","latitude":47.985073, "longitude":-122.188441}
+,{"name":"Kulshan Brewery,Bellingham","url":"http://kulshanbrewery.com","latitude":48.7602, "longitude":-122.464872}
+,{"name":"La Conner Brewing,La Conner","url":"http://www.laconnerbrewery.com","latitude":48.3887142, "longitude":-122.4962752}
+,{"name":"Lazy Boy Brewing,Everett","url":"http://lazyboybrewing.com","latitude":47.9081, "longitude":-122.221710}
+,{"name":"McMenamins - Mill Creek,Mill Creek","url":"http://mcmenamins.com/306-mcmenamins-mill-creek-home","latitude":47.876335, "longitude":-122.2124828}
+,{"name":"Menace Brewing ,Ferndale","url":"http://menacebrewing.tumblr.com/","latitude":48.8970998, "longitude":-122.6086664}
+,{"name":"Middleton Brewing,Everett","url":"http://middletonbrewing.net?","latitude":47.9103912, "longitude":-122.2249341}
+,{"name":"Mt. Index Brewery and Distillery,Index","url":"https://www.facebook.com/mt.index.brewery.and.distillery","latitude":47.830418, "longitude":-121.61895}
+,{"name":"Mt. Pilchuck Brewing,Snohomish","url":"http://www.mtpilchuckbrewery.com/","latitude":47.922901, "longitude":-122.047059}
+,{"name":"North Fork Brewers,Deming","url":"http://northforkbrewery.com","latitude":48.890441, "longitude":-122.1512}
+,{"name":"North Sound Brewing,Mount Vernon","url":"http://northsoundbrewing.com","latitude":48.431747, "longitude":-122.370236}
+,{"name":"Old Rock Brewing,Duvall","url":"https://www.facebook.com/oldrockbrewery","latitude":47.737559, "longitude":-121.986141}
+,{"name":"Redhook Ale Brewery,Woodinville","url":"http://redhook.com","latitude":47.734648, "longitude":-122.149773}
+,{"name":"River Time Brewing,Darrington","url":"http://www.rivertimebrewing.com","latitude":48.2493916, "longitude":-121.60216140}
+,{"name":"Salish Sea Brewing,Edmonds","url":"http://salishbrewing.com/","latitude":47.8096929, "longitude":-122.3767578}
+,{"name":"Scuttlebutt Brewing,Everett","url":"http://scuttlebuttbrewing.com","latitude":48.002832, "longitude":-122.217088}
+,{"name":"Scuttlebutt Brewing- Pub,Everett","url":"http://scuttlebuttbrewing.com","latitude":47.9789848, "longitude":-122.2020794}
+,{"name":"Skagit River Brewing,Mount Vernon","url":"http://skagitbrew.com","latitude":48.4192903, "longitude":-122.3355768}
+,{"name":"Skookum Brewery,Arlington","url":"http://www.skookumbrewery.com/","latitude":48.1593089, "longitude":-122.1510124}
+,{"name":"Sno Town Brewery,Snohomish","url":"http://facebook.com/SnoTownBrewery","latitude":47.9125399, "longitude":-122.0883636}
+,{"name":"Sound to Summit Brewing,Snohomish","url":"https://www.facebook.com/soundtosummitbrewing","latitude":47.9345795, "longitude":-122.1047204}
+,{"name":"Sumerian Brewing,Woodinville","url":"http://sumerianbrewingco.com/","latitude":47.7408081, "longitude":-122.157767}
+,{"name":"Triplehorn Brewing,Woodinville","url":"http://triplehornbrewing.com","latitude":47.769236, "longitude":-122.145427}
+,{"name":"Twelve Bar Brews,Woodinville","url":"http://www.twelvebarbrews.com/","latitude":47.75642, "longitude":-122.168410}
+,{"name":"Wander Brewing,Bellingham","url":"http://wanderbrewing.com","latitude":48.754272, "longitude":-122.4740647}
+,{"name":"Whiskey Ridge Brewing,Arlington","url":"http://whiskeyridgebrewing.com","latitude":48.1972577, "longitude":-122.1268215}
+,{"name":"Whitewall Brewing,Marysville","url":"http://facebook.com/whitewallbrewingcompany","latitude":48.1282031, "longitude":-122.1841826}
+,{"name":"Airways Brewing,Kent","url":"http://airwaysbrewing.com","latitude":47.42755, "longitude":-122.2502}
+,{"name":"Airways Brewing Beer & Bistro ,Kent","url":"http://airwaysbrewing.com/beer-bistro/","latitude":47.3822052, "longitude":-122.2355339}
+,{"name":"Bad Jimmy&rsquo;s Brewing,Seattle","url":"http://www.badjimmysbrewingco.com/#home","latitude":47.660316, "longitude":-122.365755}
+,{"name":"Bavaria Brewing ,Sammamish","url":"http://www.bavariabrewing.com/","latitude":47.6170124, "longitude":-122.0573948}
+,{"name":"Bellevue Brewing Company ,Bellevue","url":"http://bellevuebrewing.com","latitude":47.626536, "longitude":-122.1660374}
+,{"name":"Big Al Brewing,Seattle","url":"http://bigalbrewing.com","latitude":47.514331, "longitude":-122.352784}
+,{"name":"Big Block Brewing,Sammamish","url":"https://twitter.com/BigBlockBrewery","latitude":47.610192, "longitude":-122.007432}
+,{"name":"Big Time Brewing,Seattle","url":"http://bigtimebrewery.com","latitude":47.657576, "longitude":-122.313216}
+,{"name":"Black Raven Brewing,Redmond","url":"http://blackravenbrewing.com","latitude":47.6857488, "longitude":-122.1448042}
+,{"name":"Bluebird Microcreamery and Brewery,Seattle","url":"http://bluebirdseattle.com","latitude":47.682697, "longitude":-122.3549940}
+,{"name":"Burdick Brewery,Seattle","url":"http://burdickbrewery.com","latitude":47.5303889, "longitude":-122.3231782}
+,{"name":"Bushnell Craft Brewing,Redmond","url":"http://bushnellcraft.com","latitude":47.6779265, "longitude":-122.1223858}
+,{"name":"Chainline Brewing Company ,Kirkland","url":"http://www.chainlinebrewing.com","latitude":47.6724754, "longitude":-122.1963331}
+,{"name":"Counterbalance Brewing Co,Seattle","url":"http://counterbalancebeer.com/","latitude":47.5455529, "longitude":-122.3280271}
+,{"name":"Dru Bru,Snoqualmie Pass","url":"http://www.drubru.com","latitude":47.4208853, "longitude":-121.4130489}
+,{"name":"Elliott Bay Brewing - Burien,Burien","url":"http://elliottbaybrewing.com/burien","latitude":47.466625, "longitude":-122.338772}
+,{"name":"Elliott Bay Brewing - Lake City,Seattle","url":"http://elliottbaybrewing.com/lake-city","latitude":47.720411, "longitude":-122.294813}
+,{"name":"Elliott Bay Brewing - W. Seattle,Seattle","url":"http://elliottbaybrewing.com/westseattle","latitude":47.5604033, "longitude":-122.3866565}
+,{"name":"Elysian Brewing - Capitol Hill,Seattle","url":"http://elysianbrewing.com/elysian.html","latitude":47.6140342, "longitude":-122.3157256}
+,{"name":"Elysian Brewing - Fields,Seattle","url":"http://elysianbrewing.com/elysianfields.html","latitude":47.5969744, "longitude":-122.33402020}
+,{"name":"Elysian Brewing -Georgetown,Seattle","url":"http://www.elysianbrewing.com/airport-way/","latitude":47.553029, "longitude":-122.320166}
+,{"name":"Elysian Brewing -Tangletown,Seattle","url":"http://www.elysianbrewing.com/tangletown.html","latitude":47.6687718, "longitude":-122.3335159}
+,{"name":"Epic Ales,Seattle","url":"http://epicales.com","latitude":47.5753273, "longitude":-122.3343733}
+,{"name":"Fish Brewing Taproom-Woodinville,Woodinville","url":"http://","latitude":47.7343812, "longitude":-122.1425939}
+,{"name":"Flycaster Brewing,Kirkland","url":"http://flycasterbrewing.com","latitude":47.7103352, "longitude":-122.1692174}
+,{"name":"Flying Bike Cooperative Brewery,Seattle","url":"http://www.flyingbike.coop/","latitude":47.6921041, "longitude":-122.3549951}
+,{"name":"Flying Lion Brewing ,Seattle","url":"http://www.flyinglionbrewing.com/","latitude":47.5559822, "longitude":-122.2842153}
+,{"name":"Fremont Brewing,Seattle","url":"http://fremontbrewing.com","latitude":47.6487961, "longitude":-122.3440466}
+,{"name":"Geaux Brewing,Bellevue","url":"http://geauxbrewing.com","latitude":47.6304115, "longitude":-122.1797945}
+,{"name":"Georgetown Brewing,Seattle","url":"http://georgetownbeer.com","latitude":47.555317, "longitude":-122.3257160}
+,{"name":"Ghostfish Brewing,Seattle","url":"http://ghostfishbrewing.com/","latitude":47.5762875, "longitude":-122.3338489}
+,{"name":"Gordon Biersch Brewery Restaraunt,Seattle","url":"http://gordonbiersch.com/locations/seattle-wa","latitude":47.612427, "longitude":-122.335349}
+,{"name":"Hale&rsquo;s Ales,Seattle","url":"http://halesbrewery.com","latitude":47.65914, "longitude":-122.36519}
+,{"name":"Hellbent Brewing Company ,Seattle","url":"http://www.hellbentbrewingcompany.com/","latitude":47.7239727, "longitude":-122.293177}
+,{"name":"Herbert B. Friendly Brewing,Renton","url":"http://www.drinkhbf.com","latitude":47.4755288, "longitude":-122.2058593}
+,{"name":"Hi-Fi Brewing,Redmond","url":"http://www.hifibrewing.com","latitude":47.6858911, "longitude":-122.1404393}
+,{"name":"Hilliard&rsquo;s Beer,Seattle","url":"http://hilliardsbeer.com","latitude":47.66453, "longitude":-122.37793}
+,{"name":"Holy Mountain Brewing,Seattle","url":"http://blog.holymountainbrewing.com/","latitude":47.6308025, "longitude":-122.3745126}
+,{"name":"Issaquah Brewhouse,Issaquah","url":"http://rogue.com/events/pub-events-issaquahpub.php","latitude":47.53008, "longitude":-122.03721}
+,{"name":"Lantern Brewing,Seattle","url":"http://lanternbrewing.com","latitude":47.698077, "longitude":-122.3456020}
+,{"name":"Lowercase Brewing,Seattle","url":"http://lowercasebrewing.com","latitude":47.5303889, "longitude":-122.3231782}
+,{"name":"Lucky Envelope Brewing ,Seattle","url":"http://www.luckyenvelopebrewing.com/","latitude":47.664878, "longitude":-122.369116}
+,{"name":"Lumberjack Brewing Co. ,Maple Valley","url":"https://www.facebook.com/lumberjackbrewingcompany?_rdr","latitude":47.40652, "longitude":-121.961645}
+,{"name":"Mac and Jacks Brewing,Redmond","url":"http://macandjacks.com","latitude":47.663422, "longitude":-122.102388}
+,{"name":"Machine House Brewery,Seattle","url":"http://www.machinehousebrewery.com/","latitude":47.5510401, "longitude":-122.3180417}
+,{"name":"Maritime Pacific Brewing,Seattle","url":"http://maritimebrewery.ypguides.net","latitude":47.6627554, "longitude":-122.3717414}
+,{"name":"McMenamins - Roy Street,Seattle","url":"http://mcmenamins.com/308-mcmenamins-queen-anne-home","latitude":47.62556, "longitude":-122.352011}
+,{"name":"McMenamins - Six Arms,Seattle","url":"http://mcmenamins.com/311-six-arms-home","latitude":47.6141331, "longitude":-122.3276002}
+,{"name":"Naked City Brewery and Taproom,Seattle","url":"http://nakedcitybrewing.com","latitude":47.691833, "longitude":-122.35509}
+,{"name":"Northwest Peaks Brewery,Seattle","url":"http://nwpeaksbrewery.com","latitude":47.66487, "longitude":-122.378650}
+,{"name":"Odin Brewing,Tukwila","url":"http://odinbrewing.com","latitude":47.4586201, "longitude":-122.2520835}
+,{"name":"Outer Planet Craft Brewing,Seattle","url":"http://www.outerplanetbrewing.com/","latitude":47.618022, "longitude":-122.316508}
+,{"name":"Outlander Brewery and Pub,Seattle","url":"http://outlanderbrewing.com","latitude":47.652228, "longitude":-122.355562}
+,{"name":"Peddler Brewing,Seattle","url":"http://www.peddlerbrewing.com/","latitude":47.6638963, "longitude":-122.3770908}
+,{"name":"Pike Brewing,Seattle","url":"http://pikebrewing.com","latitude":47.60807, "longitude":-122.33948}
+,{"name":"Populuxe Brewing,Seattle","url":"http://www.populuxebrewing.com","latitude":47.6645826, "longitude":-122.367549}
+,{"name":"Postdoc Brewing,Redmond","url":"http://postdocbrewing.com/","latitude":47.6635538, "longitude":-122.1049839}
+,{"name":"Pyramid Breweries,Seattle","url":"http://pyramidbrew.com","latitude":47.59213, "longitude":-122.33448}
+,{"name":"Ram Brewing - Kent,Kent","url":"http://theram.com/washington/kent.html","latitude":47.3850676, "longitude":-122.2352627}
+,{"name":"Ram Brewing - Northgate,Seattle","url":"http://theram.com/washington/northgate.html","latitude":47.70698, "longitude":-122.325810}
+,{"name":"Ram Brewing - Uvillage,Seattle","url":"http://theram.com/washington/seattle.html","latitude":47.66725, "longitude":-122.30058}
+,{"name":"Ravenna Brewing Company,Seattle","url":"https://www.facebook.com/RavennaBrewing","latitude":47.6685094, "longitude":-122.299201}
+,{"name":"Reuben�s Brews,Seattle","url":"http://reubensbrews.com","latitude":47.6653979, "longitude":-122.3730986}
+,{"name":"Rock Bottom Brewing - Bellevue,Bellevue","url":"http://rockbottom.com/bellevue","latitude":47.615131, "longitude":-122.198058}
+,{"name":"Rock Bottom Brewing - Seattle,Seattle","url":"http://rockbottom.com/seattle","latitude":47.609105, "longitude":-122.33418}
+,{"name":"Rooftop Brewing,Seattle","url":"http://rooftopbrewco.com","latitude":47.655811, "longitude":-122.3730974}
+,{"name":"Schooner Exact Brewing,Seattle","url":"http://www.schoonerexact.com","latitude":47.568554, "longitude":-122.3342416}
+,{"name":"Seapine Brewing Company,Seattle","url":"http://theseattlebrewingcompany.com","latitude":47.569309, "longitude":-122.328783}
+,{"name":"Snoqualmie Falls Brewing,Snoqualmie","url":"http://fallsbrew.com","latitude":47.527461, "longitude":-121.8235418}
+,{"name":"Soos Creek Brewing,Covington","url":"http://sooscreekbrewingco.com","latitude":47.3766, "longitude":-122.11670}
+,{"name":"Spinnaker Bay Brewery,Seattle","url":"http://spinnakerbaybrewing.com","latitude":47.5507723, "longitude":-122.2770901}
+,{"name":"Standard Brewing,Seattle","url":"http://standardbrew.com","latitude":47.5994442, "longitude":-122.2995779}
+,{"name":"Stoup Brewing ,Seattle","url":"http://www.stoupbrewing.com/","latitude":47.6666529, "longitude":-122.371202}
+,{"name":"Strong Arm Brewing,Renton","url":"http://www.strongarmbrewing.com/","latitude":47.429983, "longitude":-122.152149}
+,{"name":"Tin Dog Brewing,Seattle","url":"http://tindogbrewing.com","latitude":47.5255443, "longitude":-122.3303027}
+,{"name":"Triple R Brewing,Seattle","url":"https://www.facebook.com/pages/Triple-R-Brewing/700119990007531","latitude":47.654153, "longitude":-122.331824}
+,{"name":"Two Beers Brewing,Seattle","url":"http://twobeersbrewery.com","latitude":47.560571, "longitude":-122.338128}
+,{"name":"Urban Family Brewing Company,Seattle","url":"http://www.urbanfamilybrewing.com/","latitude":47.6605583, "longitude":-122.3899516}
+,{"name":"West Seattle Brewing,Seattle","url":"http://westseattlebrewing.com","latitude":47.5643853, "longitude":-122.3772925}
+,{"name":"Wet Head Brewing,Auburn","url":"http://wetheadbrewery.com","latitude":47.312622, "longitude":-122.2290230}
+,{"name":"Cascadia Hombrew ,Olympia","url":"http://www.cascadiahomebrew.com/","latitude":47.0447756, "longitude":-122.899892}
+,{"name":"Cole Street Brewing,Enumclaw","url":"http://colestreetbrew.com","latitude":47.2101184, "longitude":-121.9838879}
+,{"name":"Dick&rsquo;s Brewing ,Centralia","url":"http://dicksbeer.com/","latitude":46.7351898, "longitude":-123.0014354}
+,{"name":"Dick&rsquo;s Brewing,Centralia","url":"http://dicksbeer.com","latitude":46.771347, "longitude":-123.007543}
+,{"name":"Elk Head Brewing,Buckley","url":"https://www.facebook.com/pages/Elk-Head-Brewing-Company-Inc/1158523917","latitude":47.1595252, "longitude":-122.0534028}
+,{"name":"Engine House No. 9,Tacoma","url":"http://ehouse9.com","latitude":47.25603, "longitude":-122.47327}
+,{"name":"Fish Brewing,Olympia","url":"http://fishbrewing.com","latitude":47.04395, "longitude":-122.89639}
+,{"name":"Harmon Brewery and Eatery,Tacoma","url":"http://harmonbrewingco.com","latitude":47.2436227, "longitude":-122.4366137}
+,{"name":"Harmon Brewing - Hub,Tacoma","url":"http://harmonbrewingco.com","latitude":47.261848, "longitude":-122.4462693}
+,{"name":"Harmon Tap Room ,Tacoma","url":"http://theharmontaproom.com/","latitude":47.2619567, "longitude":-122.44594690}
+,{"name":"Lake Tapps Brewing ,Sumner","url":"http://www.laketappsbrewingco.com/","latitude":47.203771, "longitude":-122.246708}
+,{"name":"M.T. Head Brewing,Graham","url":"http://www.mtheadbrewingco.com","latitude":47.0083089, "longitude":-122.217599}
+,{"name":"McMenamins - Olympic Club,Centralia","url":"http://mcmenamins.com/1282-olympic-club-pub-home","latitude":46.7166422, "longitude":-122.9540454}
+,{"name":"McMenamins Spar Cafe and Bar,Olympia","url":"http://mcmenamins.com/633-mcmenamins-spar-caf_-home","latitude":47.0450492, "longitude":-122.9010127}
+,{"name":"Narrows Brewing,Tacoma","url":"http://narrowsbrewing.com","latitude":47.2439791, "longitude":-122.5579755}
+,{"name":"Northwest Brewing Company ,Pacific","url":"http://northwestbrewingcompany.com/","latitude":47.2479, "longitude":-122.2485525}
+,{"name":"Odd Otter Brewing,Tacoma","url":"http://oddotterbrewing.com","latitude":47.2566977, "longitude":-122.4395469}
+,{"name":"Outlaw Ales ,Edgewood","url":"https://www.facebook.com/pages/Outlaw-Ales/559995607381550?sk=timeline","latitude":47.217443, "longitude":-122.291287}
+,{"name":"Pacific Brewing and Malting,Tacoma","url":"http://pacificbrewingandmalting.com","latitude":47.2585949, "longitude":-122.4402711}
+,{"name":"Powerhouse Restaurant and Brewery,Puyallup","url":"http://powerhousebrewpub.com","latitude":47.191597, "longitude":-122.2881370}
+,{"name":"Puyallup River Brewing,Puyallup","url":"http://puyallupbrewing.com","latitude":47.1911973, "longitude":-122.2940281}
+,{"name":"Ram Brewing - Lacey,Lacey","url":"http://theram.com/washington/lacey.html","latitude":47.062175, "longitude":-122.76872}
+,{"name":"Ram Brewing - Lakewood,Lakewood","url":"http://theram.com/washington/lakewood.html","latitude":47.16659, "longitude":-122.5153}
+,{"name":"Ram Brewing - Puyallup, longitude:South Hill,Puyallup","url":"http://theram.com/washington/puyallup-southhill.html","latitude":47.159888, "longitude":-122.292323}
+,{"name":"Ram Brewing - Puyallup, longitude:Sunrise Village,Puyallup","url":"http://theram.com/washington/puyallup-sunrise.html","latitude":47.11506, "longitude":-122.29032}
+,{"name":"Ram Brewing - Tacoma,Tacoma","url":"http://theram.com/washington/tacoma.html","latitude":47.2797258, "longitude":-122.4747625}
+,{"name":"St. Helens Brewing,Toledo","url":"https://www.facebook.com/pages/St-Helens-Brewing-Co/285829738122000","latitude":46.433547, "longitude":-122.796442}
+,{"name":"Tacoma Brewing Company,Tacoma","url":"http://tacomabrewing.com","latitude":47.2578578, "longitude":-122.4424719}
+,{"name":"The Station U-Brew,Puyallup","url":"http://thestationubrew.com","latitude":47.193445, "longitude":-122.295685}
+,{"name":"Three Magnets Brewing,Olympia","url":"http://www.threemagnetsbrewing.com/","latitude":47.0431492, "longitude":-122.8985620}
+,{"name":"Top Rung Brewing,Lacey","url":"http://www.toprungbrewing.com","latitude":47.0759538, "longitude":-122.76318}
+,{"name":"Triceratops Brewing Company ,Olympia","url":"https://www.facebook.com/pages/Triceratops-Brewing-Company/435015553246953","latitude":47.055495, "longitude":-122.922477}
+,{"name":"Wet Coast Brewery ,Gig Harbor","url":"http://www.wetcoastbrewing.com/","latitude":47.3209016, "longitude":-122.5877407}
+,{"name":"Wingman Brewers,Tacoma","url":"http://wingmanbrewers.com","latitude":47.241113, "longitude":-122.427344}
+,{"name":"101 Brewing,Quilcene","url":"http://101brewery.com","latitude":47.8199287, "longitude":-122.8899262}
+,{"name":"7 Seas Brewing,Gig Harbor","url":"http://7seasbrewing.com","latitude":47.310563, "longitude":-122.58234}
+,{"name":"Ashtown Brewing Company,Longview","url":"http://facebook.com/ashtownbrewingco","latitude":46.1367144, "longitude":-122.9328484}
+,{"name":"Bainbridge Island Brewing,Bainbridge Island","url":"http://www.bainbridgebeer.com","latitude":47.648325, "longitude":-122.525357}
+,{"name":"Barhop Brewing,Port Angeles","url":"http://www.barhopbrewing.com/","latitude":48.10219, "longitude":-123.50036}
+,{"name":"Bog Water Brewing,Westport","url":"http://www.cranberryroad.net/","latitude":46.8594356, "longitude":-124.1086043}
+,{"name":"Cash Brewing Company,Silverdale","url":"http://www.cashbrewing.com","latitude":47.644736, "longitude":-122.695748}
+,{"name":"Der Blokken Brewery,Bremerton","url":"http://derblokken.com","latitude":47.5703643, "longitude":-122.6137819}
+,{"name":"Downpour Brewing,Kingston","url":"http://www.downpourbrewing.com/","latitude":47.801037, "longitude":-122.500169}
+,{"name":"Dungeness Brewing,Port Angeles","url":"http://dungenessbrewing.com","latitude":48.088323, "longitude":-123.4176360}
+,{"name":"Fathom and League Hop Yard Brewery,Sequim","url":"http://fathomandleaguebrewery.com","latitude":48.10297, "longitude":-123.15689}
+,{"name":"Flyers Restaurant and Brewery,Oak Harbor","url":"http://eatatflyers.com","latitude":48.299074, "longitude":-122.652418}
+,{"name":"Grove Street Brewhouse,Shelton","url":"http://facebook.com/grovestreetbrewhouse","latitude":47.211284, "longitude":-123.10084}
+,{"name":"Harmon HUB at Gig Harbor ,Gig Harbor","url":"http://thehubrestaurants.com/locations/gig-harbor/","latitude":47.2690978, "longitude":-122.5746884}
+,{"name":"Hood Canal Brewery,Kingston","url":"http://hoodcanalbrewery.com","latitude":47.803707, "longitude":-122.57332}
+,{"name":"Hop Crew Brewing,Sequim","url":"https://www.facebook.com/pages/The-Hop-Crew-Brewing/471273829641059","latitude":48.1388213, "longitude":-123.1564426}
+,{"name":"Island Hoppin&rsquo; Brewery,Eastsound","url":"http://www.islandhoppinbrewery.com","latitude":48.70256, "longitude":-122.914887}
+,{"name":"North Jetty Brewing,Seaview","url":"https://www.facebook.com/northjettybrew","latitude":46.333146, "longitude":-124.054537}
+,{"name":"Peaks Brewpub,Port Angeles","url":"http://peakspub.com","latitude":48.1178896, "longitude":-123.4320678}
+,{"name":"Port Townsend Brewing,Port Townsend","url":"http://porttownsendbrewing.com","latitude":48.1071945, "longitude":-122.78094190}
+,{"name":"Propolis Brewing,Port Townsend","url":"http://propolisbrewing.com","latitude":48.1201269, "longitude":-122.7942481}
+,{"name":"Rainy Daze Brewing ,Silverdale","url":"https://www.facebook.com/RainyDazeBrewing","latitude":47.698976, "longitude":-122.739233}
+,{"name":"River Mile 38 Brewing Co. ,Cathlamet","url":"http://rivermile38.com/","latitude":46.2055122, "longitude":-123.3858344}
+,{"name":"Silver City Brewery and Taproom,Bremerton","url":"http://silvercitybrewery.com","latitude":47.561567, "longitude":-122.678125}
+,{"name":"Silver City Restaurant and Brewery,Silverdale","url":"http://www.silvercitybrewery.com/","latitude":47.659282, "longitude":-122.687358}
+,{"name":"Slaughter County Brewing,Port Orchard","url":"http://facebook.com/slaughtercountybrewing","latitude":47.543084, "longitude":-122.626219}
+,{"name":"Slippery Pig Brewing,Poulsbo","url":"http://slipperypigbrewing.com","latitude":47.7346178, "longitude":-122.6462842}
+,{"name":"Sound Brewery,Poulsbo","url":"http://soundbrewery.com","latitude":47.73989, "longitude":-122.65742}
+,{"name":"Twin Peaks Brewing and Malting,Port Angeles","url":"https://www.facebook.com/TwinPeaksBrewingandMaltingCo","latitude":48.1217609, "longitude":-123.4955844}
+,{"name":"Valholl Brewing,Poulsbo","url":"http://valhollbrewing.com","latitude":47.746259, "longitude":-122.6499050}
+,{"name":"Vashon Brewing (Production Only),Vashon","url":"http://www.cliffsbeer.com/brewing-blog.html","latitude":47.40341, "longitude":-122.46407}
+,{"name":"Westport Brewing,Westport","url":"https://www.facebook.com/pages/Westport-Brewing-Co/181075301942197","latitude":46.890334, "longitude":-124.104352}
+]}

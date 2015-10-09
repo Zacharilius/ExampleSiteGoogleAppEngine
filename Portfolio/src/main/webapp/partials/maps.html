@@ -28,9 +28,16 @@
 	</div>
 </div>
 <div ng-controller="StarbucksController">
-	<div class="map-container map-odd">
+  	<div class="map-container map-odd">
 		<h2>Starbucks Seattle</h2>
 		<h5>Map Clusterer</h5>
-		<map zoom="2" center="[45.518970, -122.672899]"></map>
+		<map zoom={{zoom}} center={{center}} scrollwheel= {{scrollwheel}}></map>
 	</div>
-</div></div>
+</div>
+<div ng-controller="SeattleBreweriesController">
+  	<div class="map-container map-even">
+		<h2>Washington Breweries</h2>
+		<h5>Map Clusterer</h5>
+		<map zoom={{zoom}} center={{center}} scrollwheel= {{scrollwheel}}></map>
+	</div>
+</div>
