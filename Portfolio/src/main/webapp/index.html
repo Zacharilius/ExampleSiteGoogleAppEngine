@@ -13,14 +13,15 @@
   <link rel=stylesheet type="text/css" href="/components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/icomoon.css">
   <link rel=stylesheet type="text/css" href="/css/main.css">  
+  
 </head>
 <body ng-controller="RootCtrl">
 <nav class="navbar">
 <div class="container">
 	<ul class="list-inline pull-left">	
-		<li ng-class="{ active: isActive('/')}" ng-click="collapseNavbar()"><a class="" href="#/" data-toggle="tooltip" data-placement="bottom" title="Home"><div class="square"><span id="home" class="icon icon-home3"></span></div></a></li>
-		<li ng-class="{ active: isActive('/job')}" ng-click="collapseNavbar()"><a class="" href="#/projects" data-toggle="tooltip" data-placement="bottom" title="Projects"><div class="square"><span id="projects" class="icon icon-sphere"></span></div></a></li>
-		<li ng-class="{ active: isActive('/projects')}" ng-click="collapseNavbar()"><a class="" href="#/maps" data-toggle="tooltip" data-placement="bottom" title="Maps!"><div class="map-circle circle"><span id="earth" class="icon icon-earth"></span></div></a></li>
+		<li ng-class="{ active: isActive('/')}" ng-click="collapseNavbar()"><a class="" href="#/" data-toggle="tooltip" data-placement="bottom" title="Home"><div ng-class="{ active: isActive('/')}" class="square"><span ng-class="{ active: isActive('/')}" id="home" class="icon icon-home3"></span></div></a></li>
+		<li ng-class="{ active: isActive('/projects')}" ng-click="collapseNavbar()"><a class="" href="#/projects" data-toggle="tooltip" data-placement="bottom" title="Projects"><div class="square"><span id="projects" class="icon icon-sphere"></span></div></a></li>
+		<li ng-class="{ active: isActive('/maps')}" ng-click="collapseNavbar()"><a class="" href="#/maps" data-toggle="tooltip" data-placement="bottom" title="Maps!"><div class="map-circle circle"><span id="earth" class="icon icon-earth"></span></div></a></li>
 		<li ng-class="{ active: isActive('/contact')}" ng-click="collapseNavbar()"><a class="" href="#/contact" data-toggle="tooltip" data-placement="bottom" title="Contact"><div class="square"><span id="contactme" class="icon icon-envelop"></span></div></a></li>
 	</ul>
 	<ul class="list-inline pull-right nav-hide">
@@ -32,7 +33,7 @@
 </div>	
 </nav>
 
-<div class="ng-view"></div>
+<ng-view></ng-view>
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
@@ -64,9 +65,14 @@
 <script src="/js/controllers.js"></script>
 <script src="/js/main.js"></script>
 <script>
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip(); 
-});
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68615319-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
 <!-- Put the signInButton to invoke the gapi.signin.render to restore the credential if stored in cookie. -->
 <span id="signInButton" style="display: none" disabled="true"></span>

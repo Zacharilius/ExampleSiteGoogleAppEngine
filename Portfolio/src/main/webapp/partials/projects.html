@@ -1,8 +1,8 @@
 <div class="container" ng-controller="ProjectsCtrl">
-<div class="row">
-	<div class="col-md-12"><h1>Project Portfolio</h1></div>
-</div>
-<div class="project">
+	<div class="row">
+		<div class="col-md-12"><h1>Project Portfolio</h1></div>
+	</div>
+	<div class="project">
 	<div class="row">		
 		<div class="col-sm-8">
 			<div class="picture-container"><img class="picture-item project-image img-responsive" ng-src="{{p1image}}" alt="Right Image Issue"></div>	
@@ -15,44 +15,43 @@
 		<div class="col-sm-3">
 			<h1 class="title">Odd-Job</h1>		
 			<p class="project-text">Odd-Job is a job posting site that specializes in odd jobs. It allows users to find and
-			post odd-jobs around the Greater Seattle Area. It uses AngularJS, HTML5, CSS3, GoogleMapsAPI, and Java Google Endpoints to display,
-			manage, and store data.</p>
-			<div class="pull-right">
-				<a href="https://www.github.com/zacharilius/odd-job"><button type="button" class="btn btn-default btn-md">
- 					 <span class="icon-github" aria-hidden="true"></span> GitHub
-				</button></a>				
-				<a href="https:// odd-job.appspot.com"><button type="button" class="btn btn-default btn-md">
- 					 <span  aria-hidden="true"><img class="project-button-img" src="/images/project/odd-job.png"></span> Odd-Job
-				</button></a>
-			</div>		
+			post odd-jobs around the Greater Seattle Area.</p>
+			<p><span class="technologies">HTML5</span><span class="technologies">AngularJS</span><span class="technologies">GoogleMapsAPI</span>
+			<span class="technologies">Google Endpoints</span><span class="technologies">Java</span><span class="technologies">Oauth 2.0</span>
+			<span class="technologies">JavaScript</span><span class="technologies">CSS3</span></p>
+			<a href="https://www.github.com/zacharilius/odd-job"><button type="button" class="btn btn-default btn-md">
+ 				 <span class="icon-github" aria-hidden="true"></span> GitHub
+			</button></a>				
+			<a href="https:// odd-job.appspot.com"><button type="button" class="btn btn-default btn-md">
+ 				 <span  aria-hidden="true"><img class="project-button-img" src="/images/project/odd-job.png"></span> Odd-Job
+			</button></a>
+		</div>		
 		</div>
-		
 	</div>
-</div>
-<div class="project">
-	<div class="row">
-		<div class="col-md-3 ">
-			<h1 class="title">JavaScript Program A Day</h1>		
-			<p class="project-text">I want to become a JavaScript ninja so I'm challenging myself to do a new JavaScript program everyday for a year. The programs
-			are in JavaScript, jQuery, Angular, JavaScript APIs (Wikipedia, Google Maps, etc.), Node, and Express. The code is hosted on GitHub and the projects can be found
-			by following the link below. If you have any project requests, comments, or questions, click the contact button in the navigation bar and send them to me. </p>
-			<div class="pull-right">
+	<div class="project">
+		<div class="row">
+			<div class="col-md-3 ">
+				<h1 class="title">JavaScript Program A Day</h1>		
+				<p class="project-text">I want to become a JavaScript ninja so I'm challenging myself to do a new JavaScript program everyday for a year. The programs
+				are in JavaScript, jQuery, Angular, JavaScript APIs (Wikipedia, Google Maps, etc.), Node, and Express. The code is hosted on GitHub and the projects can be found
+				by following the link below. If you have any project requests, comments, or questions, click the contact button in the navigation bar and send them to me. </p>
+				<p><span class="technologies">NodeJS</span><span class="technologies">AngularJS</span><span class="technologies">GoogleMapsAPI</span>
+				<span class="technologies">JavaScript</span><span class="technologies">ExpressJS</span></p>			
 				<a href="https://www.github.com/zacharilius/javascript-a-day-challenge"><button type="button" class="btn btn-default btn-md">
- 					 <span class="icon-github" aria-hidden="true"></span> GitHub
+	 				 <span class="icon-github" aria-hidden="true"></span> GitHub
 				</button></a>				
 				<a href="#/projects/year-javascript-challenge"><button type="button" class="btn btn-default btn-md">
 					<span class="icon-rocket" aria-hidden="true"></span> Projects 
 				</button></a>
-			</div>		
+			</div>
+			<div  hidden class="col-md-8">
+				<div class="picture-container"><img class="picture-item project-image img-responsive" ng-src="{{p2image}}" alt="Right Image Issue"></div>	
+			</div>
+			<div hidden class="col-md-1">
+				<div ng-click='setImage("p2", "desktop")'class="screenType btn" ng-class="isActive('p2', 'desktop')"><span class="icon-display"></span></div>
+				<div ng-click='setImage("p2", "tablet")' class="screenType btn" ng-class="isActive('p2', 'tablet')"><span class="icon-tablet"></span></div>
+				<div ng-click='setImage("p2", "mobile")'class="screenType btn" ng-class="isActive('p2', 'mobile')"><span class="icon-mobile2"></span></div>			
+			</div>	
 		</div>
-		<div  hidden class="col-md-8">
-			<div class="picture-container"><img class="picture-item project-image img-responsive" ng-src="{{p2image}}" alt="Right Image Issue"></div>	
-		</div>
-		<div hidden class="col-md-1">
-			<div ng-click='setImage("p2", "desktop")'class="screenType btn" ng-class="isActive('p2', 'desktop')"><span class="icon-display"></span></div>
-			<div ng-click='setImage("p2", "tablet")' class="screenType btn" ng-class="isActive('p2', 'tablet')"><span class="icon-tablet"></span></div>
-			<div ng-click='setImage("p2", "mobile")'class="screenType btn" ng-class="isActive('p2', 'mobile')"><span class="icon-mobile2"></span></div>			
-		</div>	
 	</div>
-</div>
 </div>

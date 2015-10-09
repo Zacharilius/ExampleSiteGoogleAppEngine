@@ -3,7 +3,7 @@
 	<div class="map-container map-odd" style="	padding-top: 0px;">
 		<h2>Seattle Breweries</h2>
 		<h5>An interactive map that uses fusion tables and ng-map.</h5>
-		<map zoom="11" center="47.6097, -122.3331">
+		<map zoom={{zoom}} center={{center}} scrollwheel= {{scrollwheel}}>
 			<fusion-tables-layer query="{
 				select: 'name, location, logo',
 				from: '1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN'}",
@@ -19,12 +19,18 @@
 <div ng-controller="MapNeighborhoodCtrl">
 	<div class="map-container map-even">
 		<h2>Seattle Neighborhood Mapper</h2>
-		<h5>Using Zillow neighborhood data, people can identify their neighborhoods.</h5>
-		<map zoom="11" center="47.6097, -122.3331">
+		<h5>Loads Zillow neighborhood data in GeoJSON so people can identify their neighborhoods.</h5>
+		<map zoom={{zoom}} center={{center}} scrollwheel= {{scrollwheel}}>
   			<map-data set-style="{fillColor: 'green', strokeWeight: 1}" on-mouseover="onMouseover()" load-geo-json="/geoJson/washingtonHoods.json"></map-data>
 		</map>
 		<h1>{{neighborhoodName}}</h1>
-		<a href="https://www.google.com/fusiontables/DataSource?docid=1psigXLnyIAN4GNdX_W_CzCeEzHjo5ZgIqrO12_JN"><div class="btn btn-default btn-map">Add Breweries</div></a>
+		<a href="http://www.zillow.com/howto/api/neighborhood-boundaries.htm"><img src="/images/Zillow_Logo_HoodsProvided_RightAligned.gif"/></a>
 	</div>
 </div>
-</div>
+<div ng-controller="StarbucksController">
+	<div class="map-container map-odd">
+		<h2>Starbucks Seattle</h2>
+		<h5>Map Clusterer</h5>
+		<map zoom="2" center="[45.518970, -122.672899]"></map>
+	</div>
+</div></div>

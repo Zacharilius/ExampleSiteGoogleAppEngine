@@ -16,8 +16,7 @@ var zachariliusApp = zachariliusApp || {};
  */
 zachariliusApp.controllers = angular.module('portfolioControllers', [ 'ui.bootstrap' ]);
 
-zachariliusApp.controllers.controller('RootCtrl', function($scope, $location,
-		oauth2Provider) {
+zachariliusApp.controllers.controller('RootCtrl', function($scope, $location) {
 	
 	/**
 	 * Returns if the viewLocation is the currently viewed page.
@@ -83,6 +82,10 @@ zachariliusApp.controllers.controller('MapCtrl', function($scope){
 });
 
 zachariliusApp.controllers.controller('MapBreweryCtrl', function($scope){
+	$scope.zoom = 11;
+	$scope.center = "47.6097, -122.3331";
+	$scope.scrollwheel = "false";
+	
 	$scope.onMouseover = function(event) {
 	    var fillArray = ['red', 'blue', 'yellow', 'green'];
 	    var style = this.getFeatureStyle(event.featureId); 
@@ -95,13 +98,58 @@ zachariliusApp.controllers.controller('MapBreweryCtrl', function($scope){
 });
 
 zachariliusApp.controllers.controller('MapNeighborhoodCtrl', function($scope){
-	$scope.neighborhoodName = "";
+	$scope.zoom = 11;
+	$scope.center = "47.6097, -122.3331";
+	$scope.scrollwheel = "false";
+	
+	$scope.neighborhoodName = " ";
 	$scope.onMouseover = function(event) {
 		$scope.neighborhoodName = event.feature.getProperty('NAME');
 		console.log($scope.neighborhoodName);
 	};
 });
-
+zachariliusApp.controllers.controller('StarbucksController', function($scope, $http, StreetView) {
+    $scope.map;
+    $scope.stores = [];
+    $scope.$on('mapInitialized', function(event, evtMap) {
+      map = evtMap;
+      $scope.map = map;
+      console.log('loading scripts/starbucks.json');
+      $http.get('/geoJson/starbucks.json').success( function(stores) {
+        for (var i=0; i<stores.length; i++) {
+          var store = stores[i];
+          store.position = new google.maps.LatLng(store.latitude,store.longitude);
+          store.title = store.name;
+          var marker = new google.maps.Marker(store);
+          google.maps.event.addListener(marker, 'click', function() {
+            $scope.store = this;
+            StreetView.getPanorama(map).then(function(panoId) {
+              $scope.panoId = panoId;
+            });
+            map.setZoom(18);
+            map.setCenter(this.getPosition());
+            $scope.storeInfo.show();
+          });
+          google.maps.event.addListener(map, 'click', function() {
+            $scope.storeInfo.hide();
+          });
+          $scope.stores.push(marker); 
+        }
+        console.log('finished loading scripts/starbucks.json', '$scope.stores', $scope.stores.length);
+        $scope.markerClusterer = new MarkerClusterer(map, $scope.stores, {});
+        $scope.fullScreenToggle.click();
+      });
+    });
+    $scope.showStreetView = function() {
+      StreetView.setPanorama(map, $scope.panoId);
+      $scope.storeInfo.hide();
+    };
+    $scope.showHybridView = function() {
+      map.setMapTypeId(google.maps.MapTypeId.HYBRID);
+      map.setTilt(45);
+      $scope.storeInfo.hide();
+    }
+ });
 zachariliusApp.controllers.controller('ProjectsCtrl', function($scope){
 	$scope.p1isActive = "desktop";
 	$scope.p2isActive = "desktop";
@@ -112,7 +160,6 @@ zachariliusApp.controllers.controller('ProjectsCtrl', function($scope){
 	$scope.isActive = function(project, type){
 		if(project === 'p1'){
 			if(type === $scope.p1isActive){
-				console.log("active: " + project + type)
 				return 'active';
 			};
 		}

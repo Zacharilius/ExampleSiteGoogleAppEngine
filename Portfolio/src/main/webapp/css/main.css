@@ -59,16 +59,16 @@ body{
 a:focus, a:hover {
     text-decoration: none;
 }
-#sun:hover, #sun:focus, #sun:active{
+#sun:hover, #sun:focus{
 	color:#F4CC0A;
 }
-#night:hover, #night:focus, #night:active{
+#night:hover, #night:focus{
 	color:#FBF619;
 }
-#rain:hover, #rain:focus, #rain:active{
+#rain:hover, #rain:focus{
 	color:#03DDFF;
 }
-#projects:hover, #projects:focus, #projects:active{
+#projects:hover, #projects:focus, .active #projects{
 	color:#FFC107;
 }
 #github:hover, #github:focus{
@@ -77,7 +77,7 @@ a:focus, a:hover {
 #codepen:hover, #codepen:focus{
 	color:#000;
 }
-#home:hover, #home:focus, #home:active{
+#home:hover, #home:focus, .active #home{
 	color:#B91787;
 }
 #linkedin:hover, #linkedin:focus{
@@ -92,10 +92,10 @@ a:focus, a:hover {
 #googleplus:hover, #googleplus:focus{
 	color:#DC4937;
 }
-#contactme:hover, #contactme:focus, #contactme:active{
+#contactme:hover, #contactme:focus, .active #contactme{
 	color:#F6590C;
 }
-#earth:hover, #earth:focus, #earth:active{
+#earth:hover, #earth:focus, .active #earth{
 	color:#73d216;
 }
 .square-instagram:hover, .square-instagram:focus{
@@ -104,7 +104,7 @@ a:focus, a:hover {
 .square-linkedin:hover, .square-linkedin:focus{
 	background: #FFFFFF;	
 }
-.square:hover, .square:focus, .square:active{
+.square:hover, .square:focus, .active .square{
 	width: 35px;
 	height: 35px;
 	-moz-border-radius: 25%;
@@ -114,10 +114,10 @@ a:focus, a:hover {
 	padding:0px 0px 0px 0px;
 }
 
-.map-circle:hover, .map-circle:focus, .map-circle:active{
+.map-circle:hover, .map-circle:focus, .active .map-circle{
 	background: #2072C9;
 }
-.circle:hover, .circle:focus, .circle:active{
+.circle:hover, .circle:focus, .active .circle{
 	width: 35px;
 	height: 35px;
 	-moz-border-radius: 50%;
@@ -206,6 +206,15 @@ a:focus, a:hover {
 .project-text{
 	text-align: left;
 }
+.technologies{
+	text-align: center;
+	margin: 1px;
+	padding: 1px;
+	background-color: #FFC107;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
 .screenType{
 	color: #005D53;
 	font-size: 35px;
@@ -235,10 +244,20 @@ a:focus, a:hover {
 .btn.active, .btn:active {
 	box-shadow: none;	
 }
+@media screen and (min-width:450px){
+	.contact-buttons{
+			display: none;
 
+	}
+}
 @media screen and (max-width:450px){
 	.nav-hide{
 		display: none;
+	}
+	.contact-buttons{
+		display: block;
+		margin-top: 2q0px;
+		margin-bottom: 20px;
 	}
 }
 
