@@ -20,11 +20,8 @@
             <web-resource-name>all</web-resource-name>
             <url-pattern>/*</url-pattern>
         </web-resource-collection>
-        <user-data-constraint>
-            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
-        </user-data-constraint>
     </security-constraint>
-      <servlet>
+    <servlet>
         <servlet-name>SetAnnouncementServlet</servlet-name>
         <servlet-class>me.zacharilius.servlet.SetAnnouncementServlet</servlet-class>
     </servlet>
@@ -65,5 +62,13 @@
    <servlet-mapping>
        <servlet-name>AddMultiSpeakerMemcacheServlet</servlet-name>
        <url-pattern>/tasks/add_speaker_memcache</url-pattern>
-   </servlet-mapping> 
+   </servlet-mapping> 	
+	<error-page>
+        <error-code>500</error-code>
+        <location>/errors/500.html</location>
+    </error-page>
+	<error-page>
+        <error-code>404</error-code>
+        <location>/errors/404.html</location>
+    </error-page>
 </web-app>

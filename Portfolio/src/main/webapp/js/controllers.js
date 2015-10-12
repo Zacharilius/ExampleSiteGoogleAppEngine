@@ -81,9 +81,9 @@ zachariliusApp.controllers.controller('MapCtrl', function($scope){
 
 });
 
-zachariliusApp.controllers.controller('MapBreweryCtrl', function($scope){
-	$scope.zoom = 11;
-	$scope.center = "47.6097, -122.3331";
+zachariliusApp.controllers.controller('MapCoffeeCtrl', function($scope){
+	$scope.zoom = 2;
+	$scope.center = "0, 0";
 	$scope.scrollwheel = "false";
 	
 	$scope.onMouseover = function(event) {
@@ -161,35 +161,37 @@ zachariliusApp.controllers.controller('SeattleBreweriesController', function($sc
 	$scope.scrollwheel = "false";
 	
 	$scope.map;
-	$scope.stores = [];
+	$scope.breweries = [];
 	$scope.$on('mapInitialized', function(event, evtMap) {
 		var map = evtMap;
 		$scope.map = map;
-		console.log('loading scripts/starbucks.json');
-		$http.get('/geoJson/seattleBreweries.json').success( function(stores) {
-			for (var i=0; i<stores.length; i++) {
-				var store = stores[i];
-				store.position = new google.maps.LatLng(store.latitude,store.longitude);
-				store.title = store.name;
-	
-				var marker = new google.maps.Marker(store);
+		console.log('loading geoJson/seattleBreweries.json');
+		$http.get('/geoJson/seattleBreweries.json').success( function(breweries) {
+			console.log(breweries);
+			console.log(breweries.breweries.length);
+			for (var i=0; i<breweries.breweries.length; i++) {
+				var brewery = breweries.breweries[i];
+				brewery.position = new google.maps.LatLng(brewery.latitude,brewery.longitude);
+				brewery.title = brewery.name;
+				brewery.website = brewery.url;
+
+				var marker = new google.maps.Marker(brewery);
 				google.maps.event.addListener(marker, 'click', function() {
-					$scope.store = this;
+					$scope.brewery = this;
 					StreetView.getPanorama(map).then(function(panoId) {
 						$scope.panoId = panoId;
 					});
 					map.setZoom(18);
 					map.setCenter(this.getPosition());
-					$scope.storeInfo.show();
 				});
 				google.maps.event.addListener(map, 'click', function() {
 					$scope.storeInfo.hide();
 				});
 	
-				$scope.stores.push(marker); 
+				$scope.breweries.push(marker); 
 			}
-			console.log('finished loading scripts/starbucks.json', '$scope.stores', $scope.stores.length);
-			$scope.markerClusterer = new MarkerClusterer(map, $scope.stores, {});
+			console.log('finished loading geoJson/seattleBreweries.json', '$scope.breweries', $scope.breweries.length);
+			$scope.markerClusterer = new MarkerClusterer(map, $scope.breweries, {});
 		});
 	});
 	$scope.showStreetView = function() {
