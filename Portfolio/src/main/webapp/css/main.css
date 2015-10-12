@@ -208,7 +208,7 @@ a:focus, a:hover {
 }
 .technologies{
 	text-align: center;
-	margin: 1px;
+	margin: 2px;
 	padding: 1px;
 	background-color: #FFC107;
 	-moz-border-radius: 4px;
@@ -304,43 +304,41 @@ div[ng-controller=MapCtrl] #panel{
 	background-color: #E4AC00;
 	border-color: #E4AC00;
 }
-p.thought
-{
-	color: #555753;
-	position: relative;
-	width: 130px;
-	height: 100px;
-	text-align: center;
-	line-height: 100px;
-	background-color: #fff;
-	border: 8px solid #666;
-	-webkit-border-radius: 58px;
-	-moz-border-radius: 58px;
-	border-radius: 58px;
-	-webkit-box-shadow: 2px 2px 4px #888;
-	-moz-box-shadow: 2px 2px 4px #888;
-	box-shadow: 2px 2px 4px #888;
+.triangle-border {
+	left: 50%;
+	max-width: 150px;
+    position: relative;
+    padding: 15px;
+    margin: 1em 0 3em;
+    border: 5px solid #fff;
+    color: #333;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
-p.thought:before, p.thought:after
-{
-	left: 10px;
-	top: 70px;
-	width: 40px;
-	height: 40px;
-	background-color: #fff;
-	border: 8px solid #666;
-	-webkit-border-radius: 28px;
-	-moz-border-radius: 28px;
-	border-radius: 28px;
+.triangle-border:before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    border-width: 20px 20px 0;
+    border-style: solid;
+    border-color: #fff transparent;
+    display: block;
+    width: 0;
 }
-
-p.thought:after
-{
-	width: 20px;
-	height: 20px;
-	left: 5px;
-	top: 100px;
-	-webkit-border-radius: 18px;
-	-moz-border-radius: 18px;
-	border-radius: 18px;
+.triangle-border:after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 47px;
+    border-width: 13px 13px 0;
+    border-style: solid;
+    border-color: #fff transparent;
+    display: block;
+    width: 0;
+}    
+.img-center-error{
+	display: inline;
 }

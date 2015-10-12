@@ -4,8 +4,8 @@ import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
 
-import me.zacharilius.domain.Job;
 import me.zacharilius.domain.Profile;
+import me.zacharilius.domain.Project;
 
 /**
  * Custom Objectify Service that this application should use.
@@ -17,7 +17,7 @@ public class OfyService {
     static {
         // factory().register(Conference.class);
         factory().register(Profile.class);
-        factory().register(Job.class);
+        factory().register(Project.class);
     }
 
     /**

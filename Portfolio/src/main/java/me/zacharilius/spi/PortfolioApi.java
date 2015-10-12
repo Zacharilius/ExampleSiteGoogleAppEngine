@@ -28,11 +28,11 @@ import com.googlecode.objectify.cmd.Query;
 
 import me.zacharilius.Constants;
 import me.zacharilius.domain.Announcement;
-import me.zacharilius.domain.Job;
 import me.zacharilius.domain.Profile;
+import me.zacharilius.domain.Project;
 import me.zacharilius.form.EmailForm;
-import me.zacharilius.form.JobForm;
 import me.zacharilius.form.ProfileForm;
+import me.zacharilius.form.ProjectForm;
 /**
  * Defines odd-job APIs.
  */
@@ -188,9 +188,51 @@ public class PortfolioApi {
         }
         return profile;
     }
+    /**
+     * Creates a new MenuItem object and stores it to the datastore.
+     *
+     * @param user A user who invokes this method, null when the user is not signed in.
+     * @param menuItemForm A MenuItemForm object representing user's inputs.
+     * @return A newly created menuItem Object.
+     * @throws UnauthorizedException when the user is not signed in.
+     */
+    @ApiMethod(
+    		name = "createProject", 
+    		path = "createProject", 
+    		httpMethod = HttpMethod.POST)
+    public Project createProject(final ProjectForm projectForm) {
 
-
- /**
+        final Key<Project> projectKey = factory().allocateId(Project.class);
+        final long projectId = projectKey.getId();
+        final Queue queue = QueueFactory.getDefaultQueue();
+        
+        // Start transactions
+        Project project = ofy().transact(new Work<Project>(){
+        	@Override
+        	public Project run(){
+        		Project project = new Project(projectId, projectForm);
+                ofy().save().entities(project).now();
+                
+                return project;
+        	}
+        }); 
+        return project;
+    }
+    /**
+     * Queries the datastore for projects.
+     *
+     * @return A list of Project objects
+     */
+    @ApiMethod(
+            name = "getProjects",
+            path = "getProjects",
+            httpMethod = HttpMethod.POST
+    )
+    public List<Project> getProjects(){
+    	Query<Project> query = ofy().load().type(Project.class);
+    	return query.list();
+    } 
+    /**
      * Just a wrapper for Boolean.
      * We need this wrapped Boolean because endpoints functions must return
      * an object instance, they can't return a Type class such as
@@ -281,65 +323,5 @@ public EmailForm sendEmail(final EmailForm emailForm)
     	}
     }); 
     return email;
-}
-/**
- * Queries the datastore for all jobs the user created
- *
- * @return A list of job objects
- * @throws UnauthorizedException when the user is not signed in.
- */
-@ApiMethod(
-        name = "getJobsCreated",
-        path = "getJobsCreated",
-        httpMethod = HttpMethod.POST
-)
-public List<Job> getJobsCreated(final User user)throws UnauthorizedException {
-	if (user == null) {
-		throw new UnauthorizedException("Authorization required");
-	}
-	
-	System.out.println("getJobsCreated()");
-	String userId = user.getUserId();
-    Key key = Key.create(Profile.class, userId);
-    
-    Query<Job> query = ofy().load().type(Job.class).ancestor(key);
-	return query.list();
-}
-/**
- * Queries the datastore for all jobs. sorts by posting date;
- *
- * @return A list of all job objects
- * @throws UnauthorizedException when the user is not signed in.
- */
-@ApiMethod(
-        name = "getAllJobsCreated",
-        path = "getAllJobsCreated",
-        httpMethod = HttpMethod.POST
-)
-public List<Job> getAllJobsCreated()throws UnauthorizedException {
-    Query<Job> query = ofy().load().type(Job.class).order("postDate");
-	return query.list();
-}
-/**
- * Returns a Conference object with the given conferenceId.
- *
- * @param websafeConferenceKey The String representation of the Conference Key.
- * @return a Conference object with the given conferenceId.
- * @throws NotFoundException when there is no Conference with the given conferenceId.
- */
-@ApiMethod(
-        name = "getJob",
-        path = "job/{websafeJobKey}",
-        httpMethod = HttpMethod.GET
-)
-public Job getJob(
-        @Named("websafeJobKey") final String websafeJobKey)
-        throws NotFoundException {
-    Key<Job> jobKey = Key.create(websafeJobKey);
-    Job job = ofy().load().key(jobKey).now();
-    if (job == null) {
-        throw new NotFoundException("No Conference found with key: " + websafeJobKey);
-    }
-    return job;
 }
 }

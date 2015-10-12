@@ -1,0 +1,30 @@
+<div class="container" ng-controller="ProjectsCtrl">
+	<div class="row">
+		<div class="col-md-12"><h1>JavaScript Program-A-Day Challenge</h1></div>
+		<div class="col-md-12"><p>I challenged myself to create a web application everyday for a year</p></div>
+	</div>
+	<div class="project">
+		<div class="row">
+			<div class="col-md-3 ">
+				<h1 class="title">Web App-A-Day Challenge</h1>		
+				<p class="project-text">I want to become a JavaScript ninja so I'm challenging myself to create a new web application everyday for a year. The applications
+				are in JavaScript, jQuery, Angular, JavaScript APIs (Wikipedia, Google Maps, etc.), Node, and Express. The code is hosted on GitHub and the projects can be found
+				by following the link below. If you have any project requests, comments, or questions, click the contact button in the navigation bar and message me. </p>
+				<p><span class="technologies">NodeJS</span><span class="technologies">AngularJS</span><span class="technologies">GoogleMapsAPI</span>
+				<span class="technologies">JavaScript</span><span class="technologies">ExpressJS</span></p>			
+				<a href="https://www.github.com/zacharilius/javascript-a-day-challenge"><button type="button" class="btn btn-default btn-md">
+	 				 <span class="icon-github" aria-hidden="true"></span> GitHub
+				</button></a>				
+				<a href="#/projects/year-javascript-challenge/day-1"><button type="button" class="btn btn-default btn-md">
+					<span class="icon-rocket" aria-hidden="true"></span> Projects 
+				</button></a>
+			</div>
+
+			<div hidden class="col-md-1">
+				<div ng-click='setImage("p2", "desktop")'class="screenType btn" ng-class="isActive('p2', 'desktop')"><span class="icon-display"></span></div>
+				<div ng-click='setImage("p2", "tablet")' class="screenType btn" ng-class="isActive('p2', 'tablet')"><span class="icon-tablet"></span></div>
+				<div ng-click='setImage("p2", "mobile")'class="screenType btn" ng-class="isActive('p2', 'mobile')"><span class="icon-mobile2"></span></div>			
+			</div>	
+		</div>
+	</div>
+</div>
