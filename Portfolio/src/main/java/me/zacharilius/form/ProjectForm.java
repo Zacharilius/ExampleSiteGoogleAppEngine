@@ -2,6 +2,7 @@ package me.zacharilius.form;
 
 import java.util.List;
 
+import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.annotation.Index;
 
 /**
@@ -31,6 +32,9 @@ public class ProjectForm {
     @Index
     private List<technologiesList> technologies;
 
+    
+    private ProjectForm(){}
+    
 	/**
 	 * @param title
 	 * @param description
@@ -47,7 +51,7 @@ public class ProjectForm {
 		this.githubURL = githubURL;
 		this.pageURL = pageURL;
 		this.codepenURL = codepenURL;
-		this.technologies = technologies;
+		this.technologies = technologies == null ? null : ImmutableList.copyOf(technologies);
 	}
 
 	/**

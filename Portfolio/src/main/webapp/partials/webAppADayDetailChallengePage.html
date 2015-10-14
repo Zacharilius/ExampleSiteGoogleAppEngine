@@ -1,0 +1,36 @@
+<div class="container" ng-controller="ProjectsCtrl" ng-init="getProjects()">
+	<div class="row">
+		<div class="col-md-12"><h1>JavaScript App-A-Day Challenge</h1></div>
+		<div class="col-md-12"><p>I challenged myself to create a web project everyday for a year.</p></div>
+	</div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="messages" class="alert alert-{{alertStatus}}" ng-show="messages">
+                <span ng-bind="messages"></span>
+                <i class="dismiss-messages pull-right glyphicon glyphicon-remove" ng-click="messages = ''"
+                   ng-show="messages"></i>
+            </div>
+            <img class="spinner" src="/img/ajax-loader.gif" ng-show="loading"/>
+        </div>
+    </div>
+   	<div ng-repeat="project in projects | orderBy: 'date': true" class="project">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3  ng-show="project.title" class="project-text title">Day {{projects.length - $index}} - {{project.title}}</h3>		
+				<p  ng-show="project.description" class="project-text">{{project.description}}</p>
+				<p  ng-show="project.technologies" class="project-text"><span ng-repeat="technology in project.technologies" class="technologies">{{technology}}</span></p>			
+				<div class="pull-left">
+					<a ng-show="project.githubURL" href={{project.githubURL}}><button type="button" class="btn btn-default btn-md">
+		 				 <span class="icon-github" aria-hidden="true"></span> GitHub
+					</button></a>				
+					<a ng-show="project.pageURL" href={{project.pageURL}}><button type="button" class="btn btn-default btn-md">
+						<span class="icon-rocket" aria-hidden="true"></span> Project
+					</button></a>
+					<a ng-show="project.codepenURL" href={{project.codepenURL}}><button type="button" class="btn btn-default btn-md">
+						<span class="icon-codepen" aria-hidden="true"></span> CodePen 
+					</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

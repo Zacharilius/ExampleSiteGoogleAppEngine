@@ -1,30 +1,36 @@
-<div class="container" ng-controller="ProjectsCtrl">
+<div class="container">
 	<div class="row">
-		<div class="col-md-12"><h1>JavaScript Program-A-Day Challenge</h1></div>
-		<div class="col-md-12"><p>I challenged myself to create a web application everyday for a year</p></div>
+		<div class="col-md-12"><h1>JavaScript App-A-Day Challenge</h1></div>
+		<div class="col-md-12"><p>I challenged myself to create a web project everyday for a year.</p></div>
 	</div>
-	<div class="project">
+   	<div class="project">
 		<div class="row">
-			<div class="col-md-3 ">
-				<h1 class="title">Web App-A-Day Challenge</h1>		
-				<p class="project-text">I want to become a JavaScript ninja so I'm challenging myself to create a new web application everyday for a year. The applications
-				are in JavaScript, jQuery, Angular, JavaScript APIs (Wikipedia, Google Maps, etc.), Node, and Express. The code is hosted on GitHub and the projects can be found
-				by following the link below. If you have any project requests, comments, or questions, click the contact button in the navigation bar and message me. </p>
-				<p><span class="technologies">NodeJS</span><span class="technologies">AngularJS</span><span class="technologies">GoogleMapsAPI</span>
-				<span class="technologies">JavaScript</span><span class="technologies">ExpressJS</span></p>			
-				<a href="https://www.github.com/zacharilius/javascript-a-day-challenge"><button type="button" class="btn btn-default btn-md">
-	 				 <span class="icon-github" aria-hidden="true"></span> GitHub
-				</button></a>				
-				<a href="#/projects/year-javascript-challenge/day-1"><button type="button" class="btn btn-default btn-md">
-					<span class="icon-rocket" aria-hidden="true"></span> Projects 
-				</button></a>
+			<div class="col-xs-12">
+				<h3 class="project-text title">Day 2 of my App-A-Day Challenge: jQuery Input Sample</h3>		
+				<p class="project-text">For today's challenge, I used jQuery to create an input.  Also I'm too relient on bootstrap so I'll be styling the element with
+				 element without bootstrap.  JavaScript and jQuery will be used to provide some validation and to update the DOM.</p>
+				<p class="project-text"><span class="technologies">HTML</span><span class="technologies">CSS</span></p>			
+				<div class="pull-left">				
+					<a href="http://codepen.io/zacharilius/details/yYodoV/"><button type="button" class="btn btn-default btn-md">
+						<span class="icon-codepen" aria-hidden="true"></span> CodePen 
+					</button></a>
+				</div>
 			</div>
-
-			<div hidden class="col-md-1">
-				<div ng-click='setImage("p2", "desktop")'class="screenType btn" ng-class="isActive('p2', 'desktop')"><span class="icon-display"></span></div>
-				<div ng-click='setImage("p2", "tablet")' class="screenType btn" ng-class="isActive('p2', 'tablet')"><span class="icon-tablet"></span></div>
-				<div ng-click='setImage("p2", "mobile")'class="screenType btn" ng-class="isActive('p2', 'mobile')"><span class="icon-mobile2"></span></div>			
-			</div>	
+		</div>
+	</div>
+   	<div class="project">
+		<div class="row">
+			<div class="col-xs-12">
+				<h3 class="project-text title">Day 1 of my App-A-Day Challenge: Mondrain Picture</h3>		
+				<p class="project-text">I got the idea to create a Mondrain-esque picture from <a href="https://googlecreativelab.github.io/coder-projects/. ">
+				here</a>. I wanted to start off with an easy challenge.</p>
+				<p class="project-text"><span class="technologies">HTML</span><span class="technologies">CSS</span></p>			
+				<div class="pull-left">				
+					<a href="http://codepen.io/zacharilius/pen/YyxvaY"><button type="button" class="btn btn-default btn-md">
+						<span class="icon-codepen" aria-hidden="true"></span> CodePen 
+					</button></a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

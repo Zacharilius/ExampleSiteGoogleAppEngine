@@ -47,10 +47,13 @@
      * so that Google JavaScript library ready in the angular modules.
      */
     function init() {
+		console.log("init running");
         gapi.client.load('portfolio', 'v1', null, '//' + window.location.host + '/_ah/api');
+        console.log("portfolio v1 set");
         gapi.client.load('oauth2', 'v2', function () {
     	    angular.bootstrap(document, ['zachariliusApp']);
         });
+        console.log("oath2 set and angular bootstrapped");
     };
 </script>
 <script src="//apis.google.com/js/client:plusone.js?onload=init"></script>

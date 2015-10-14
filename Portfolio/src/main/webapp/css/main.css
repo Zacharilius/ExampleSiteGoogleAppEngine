@@ -342,3 +342,10 @@ div[ng-controller=MapCtrl] #panel{
 .img-center-error{
 	display: inline;
 }
+.project a{
+	color: #232323;
+}
+.project a:hover{
+	color: #FFFFFF;
+	text-decoration: underline;
+}

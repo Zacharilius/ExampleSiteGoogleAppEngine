@@ -16,8 +16,11 @@ var app = angular.module('zachariliusApp',
 		config(['$routeProvider',
 		        function ($routeProvider) {
 			            $routeProvider.
+				            when('/projects/web-app-a-day-challenge/:pageURL', {
+				                templateUrl: '/partials/webAppADayDetailChallengePage.html'				            }). 
 				            when('/projects/web-app-a-day-challenge', {
-				                templateUrl: '/partials/webAppADayChallenge.html'
+				                templateUrl: '/partials/webAppADayChallenge.html',
+				                controller: 'ProjectAppADayCtrl'
 				            }).  				            
 				            when('/projects', {
 				                templateUrl: '/partials/projects.html',

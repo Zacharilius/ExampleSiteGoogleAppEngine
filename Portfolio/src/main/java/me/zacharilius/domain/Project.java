@@ -1,9 +1,10 @@
 package me.zacharilius.domain;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-import com.google.appengine.repackaged.com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableList;
 import com.googlecode.objectify.annotation.Cache;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
@@ -45,6 +46,8 @@ public class Project {
     
     private String codepenURL;
     
+    private Date date;
+    
     /**
      * Topics related to this conference.
      */
@@ -67,16 +70,24 @@ public class Project {
 	 */
 	public Project(long id, ProjectForm projectForm) {
 		this.id = id;
+		this.date = new Date();
 		this.title = projectForm.getTitle();
 		this.description = projectForm.getDescription();
 		this.githubURL = projectForm.getGithubURL();
 		this.pageURL = projectForm.getPageURL();
 		this.codepenURL = projectForm.getCodepenURL();
+		
+		technologies = projectForm.getTechnologies();
 		this.technologies = technologies == null || technologies.isEmpty() ? null : projectForm.getTechnologies();
 	}
 
-
-
+	/**
+	 * 
+	 * @return
+	 */
+	public Date getDate(){
+		return date;
+	}
 	/**
 	 * @return the id
 	 */

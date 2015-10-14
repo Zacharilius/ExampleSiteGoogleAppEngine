@@ -38,6 +38,16 @@ zachariliusApp.controllers.controller('RootCtrl', function($scope, $location) {
 	};
 });
 
+zachariliusApp.controllers.controller('ProjectAppADayDetailCtrl', 
+		function($scope, HTTP_ERRORS){
+	
+});
+
+zachariliusApp.controllers.controller('ProjectAppADayCtrl', 
+		function($scope, HTTP_ERRORS){
+
+});
+
 zachariliusApp.controllers.controller('ContactCtrl', 
 		function ($scope, HTTP_ERRORS) {
 	$scope.loading = false;
